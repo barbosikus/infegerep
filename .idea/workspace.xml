@@ -4,70 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f215f357-4ebf-4f84-b30f-a44afd61e769" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/24/28/28.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/29/29.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/30/30.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/31/31.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/32/32.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/33/33.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/34/34.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/35/35.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/36/36.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/37/37.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/38/38.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/24/39/39.txt" afterDir="false" />
+    <list default="true" id="f215f357-4ebf-4f84-b30f-a44afd61e769" name="Changes" comment="ia misha 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/28/28.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/28/28.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/29/29.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/29/29.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/30/30.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/30/30.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/31/31.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/31/31.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/32/32.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/32/32.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/33/33.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/33/33.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/34/34.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/34/34.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/35/35.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/35/35.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/36/36.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/36/36.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/37/37.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/37/37.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/38/38.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/38/38.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/39/39.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/39/39.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/40/40.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/40/40.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/41/41.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/41/41.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/42/42.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/42/42.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/43/43.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/43/43.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/44/44.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/44/44.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/45/45.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/45/45.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/46/46.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/46/46.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/24/47/47.py" beforeDir="false" afterPath="$PROJECT_DIR$/24/47/47.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/1.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/10.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/10.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/11.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/11.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/12.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/12.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/13.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/13.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/14.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/14.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/15.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/15.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/16.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/16.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/17.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/17.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/18.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/18.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/19.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/19.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/2.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/20.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/20.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/21.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/21.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/22.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/22.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/23.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/23.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/24.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/24.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/25.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/25.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/26.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/26.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/27.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/27.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/28.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/28.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/29.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/29.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/3.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/30.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/30.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/4.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/5.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/5.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/6.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/6.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/7.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/7.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/8.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/25/9.py" beforeDir="false" afterPath="$PROJECT_DIR$/25/9.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +78,23 @@
       <option name="presentableId" value="Default" />
       <updated>1712057063373</updated>
     </task>
+    <task id="LOCAL-00001" summary="ia misha 2">
+      <option name="closed" value="true" />
+      <created>1712243156968</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1712243156968</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ia misha 2">
+      <option name="closed" value="true" />
+      <created>1712243203772</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712243203772</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -155,5 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="ia misha 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="ia misha 2" />
   </component>
 </project>
