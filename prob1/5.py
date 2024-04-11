@@ -24,7 +24,7 @@
 """
 
 for i in range(1,100):
-    b = str(bin(i)[2:])
+    b = bin(i)[2:]
     e = int(b) % 2
     d = (int(b) // 2) % 2
     if i % 2 == 0:
