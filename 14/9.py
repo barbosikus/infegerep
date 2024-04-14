@@ -9,6 +9,7 @@ for x in range(1,1000):
     while n>0:
         b+=str(n%6)
         n//=6
+    if b == '': b = '0'
     b = int(b[::-1])
     while b>0:
         c+= b%10

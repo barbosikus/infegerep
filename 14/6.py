@@ -5,10 +5,15 @@
 """
 n = 11*15**65 + 18*15**38 - 14*15**17 + 19*15**11 + 18338
 a = []
-while n>0:
-    b = n%15
-    if b not in a:
-        a.append(b)
-    n//=15
-print(len(a))
-'признаюсь подсмотрел'
+b = ""
+# while n>0:
+#     b = n%15
+#     if b not in a:
+#         a.append(b)
+#     n//=15
+# print(len(a))
+
+while n > 0:
+    b += str(n%15) if (n%15 < 10) else chr(ord("a") + n%15 - 10)
+    n //= 15
+print(len(set(b)))
