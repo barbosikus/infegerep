@@ -24,13 +24,16 @@
 """
 
 for i in range(1,100):
-    b = bin(i)[2:]
-    e = int(b) % 2
-    d = (int(b) // 2) % 2
-    if i % 2 == 0:
-        b = b+ str(d) + str(e)
-    else:
-        b = '1' +b + '0'
-    r = int(b,2)
-    if r<100:
-        print(i)
+    b = bin(i)[2:] #a
+    b = b + b[-2:] if (b[-1] == '0') else '1' + b + '0' #b
+    if int(b, 2) < 100:print(i)
+    #
+    # e = int(b) % 2
+    # d = (int(b) // 2) % 2
+    # if i % 2 == 0:
+    #     b = b+ str(d) + str(e)
+    # else:
+    #     b = '1' +b + '0'
+    # r = int(b,2)
+    # if r<100:
+    #     print(i)
