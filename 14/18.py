@@ -13,7 +13,5 @@ def f(x, c):
 
 
 for n in range(1, 10000000):
-    if len(f(n,6)) == 2 and len(f(n, 5)) == 3 and f(n, 11)[-1] == 1:
+    if len(f(n,6)) == 2 and len(f(n, 5)) == 3 and f(n, 11)[-1] == '1':
         print(n)
-
-        '''что не так?'''
