@@ -23,3 +23,18 @@
 
 При каком наименьшем N в результате работы алгоритма получится R = 9?
 """
+
+for n in range(1, 100):
+    n2 = n
+    c = 0
+    for i in range(len(str(n))):
+        e = str(n2)[-1]
+        n2 //=10
+        if int(e) %2 == 0: c+=1
+    a = str(n)[::2]
+    s = 0
+    for i in a:
+        s += int(i)
+    if abs(c - s) == 9:
+        print(n)
+        break
