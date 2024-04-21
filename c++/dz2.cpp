@@ -26,16 +26,3 @@
    оператора ветвления (ИЛИ в C++ записывается как || или or)
 */
 
-#include <iostream>
-using namespace std;
-double areDoubleEqual(double a, double b){
-if (a == b) return a;
-else return abs(a-b);
-
-}
-// Тут должна быть функция areDoubleEqual
-
-int main(){
-    cout << areDoubleEqual(0.999, 0.998);
-    return 0;
-}
