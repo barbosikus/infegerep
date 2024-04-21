@@ -12,7 +12,11 @@
 
 #include <iostream>
 using namespace std;
+double areDoubleEqual(double a, double b){
+if (a == b) return a;
+else return abs(a-b);
 
+}
 // Тут должна быть функция areDoubleEqual
 
 int main(){
