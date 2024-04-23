@@ -15,7 +15,10 @@
 Укажите наименьшее число, большее 52, которое может являться
 результатом работы автомата.
 """
+a = []
 for n in range(1, 100):
     b = bin(n)[2:]
     b = '1' + b + '0' if n % 2 == 0 else '11' + b + '11'
-    if int(b, 2) > 52: print(int(b, 2))
+    if int(b, 2) > 52 and int(b, 2) not in a:
+        a.append(int(b, 2))
+print(min(a))

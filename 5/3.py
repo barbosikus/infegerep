@@ -16,7 +16,9 @@
 """
 for n in range(1, 100):
     b = bin(n)[2:]
-    b+=b[-1]
+    b = b + b[-1]
     for i in range(2):
-        b+='0' if b.count('1') % 2 == 0 else '0'
-    if int(b, 2) > 130: print(n)
+        b+='0' if b.count('1') % 2 == 0 else '1'
+    if int(b, 2) > 130:
+        print(n)
+        break
