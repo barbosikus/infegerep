@@ -14,3 +14,7 @@
 соответствует каждая из переменных x,y,z. В ответе напишите буквы
 x,y,z в том порядке, в котором идут соответствующие им столбцы.
 """
+from itertools import product
+for x,y,z in product((0,1), repeat = 3):
+    if (not x and y and z) or (not x and not y and z) or (not x and not y and not z):
+        print(z,x,y)

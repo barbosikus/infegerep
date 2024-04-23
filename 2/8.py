@@ -10,3 +10,7 @@
 1  1  0  0  1
 1  1  1  0  1
 """
+from itertools import product
+for x,y,z,w in product((0,1), repeat = 4):
+    if not y and x and (not z or w):
+        print(w,x,z,y)

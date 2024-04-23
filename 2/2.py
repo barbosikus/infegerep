@@ -16,3 +16,8 @@
 В ответе напишите буквы a,b,c в том порядке, в котором
 идут соответствующие им столбцы.
 """
+from itertools import product
+for a,b,c in product((0,1), repeat = 3):
+    if (a and not c) or (not b and not c):
+        print(a, b, c)
+'abc'

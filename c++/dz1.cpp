@@ -13,7 +13,7 @@
 #include <iostream>
 using namespace std;
 double areDoubleEqual(double a, double b){
-if (a == b) return a;
+if (abs(a-b)<0.001) return a;
 else return abs(a-b);
 
 }
