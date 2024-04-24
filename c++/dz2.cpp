@@ -25,4 +25,15 @@
 3. (Hard) Разработать решение задачи в котором будет два
    оператора ветвления (ИЛИ в C++ записывается как || или or)
 */
-
+#include "iostream"
+using namespace std;
+int f(int a1, int a2, int a3, int a4){
+if ((a2 - a3 == a1) || (a3 - a2 == a1) || (a3 - a4 == a1) || (a4 - a3 == a1) || (a2 - a4 == a1) || (a4 - a2 == a1)) return 1;
+if ((a1 - a3 == a2) || (a3 - a1 == a2) || (a3 - a4 == a2) || (a4 - a3 == a2) || (a1 - a4 == a2) || (a4 - a1 == a2)) return 2;
+if ((a2 - a1 == a3) || (a1 - a2 == a3) || (a1 - a4 == a3) || (a4 - a1 == a3) || (a2 - a4 == a3) || (a4 - a2 == a3)) return 3;
+if ((a2 - a3 == a4) || (a3 - a2 == a4) || (a3 - a1 == a4) || (a1 - a3 == a4) || (a2 - a1 == a4) || (a1 - a2 == a4)) return 4;
+else return 0;
+}
+int main(){
+cout << f(3, -3, -3, 6);
+}
