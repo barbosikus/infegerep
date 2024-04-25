@@ -10,3 +10,9 @@
 5. АААЯ
 6. ААИА
 """
+from  itertools import *
+a = 0
+for z,x,c,v in product('aimrz', repeat = 4):
+    a+=1
+    if a == 211:
+        print(z+x+c+v)

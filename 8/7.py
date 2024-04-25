@@ -4,3 +4,12 @@
 подряд две гласные или две согласные. Сколько различных кодов может
 составить Петя?
 """
+from itertools import *
+a = 0
+for z in permutations('абиколун'):
+    s = ''.join(z)
+    s = s.replace('у', 'а').replace('и', 'а').replace('о', 'а')
+    s = s.replace('к', 'б').replace('л', 'б').replace('н', 'б')
+    if 'аа' not in s and 'бб' not in s:
+        a+=1
+print(a)
