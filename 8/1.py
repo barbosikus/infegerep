@@ -4,3 +4,10 @@
 буква может входить в слово несколько раз. Слова не обязательно
 должны быть осмысленными словами русского языка.
 """
+from itertools import product
+a = 0
+for z,x,c,v in product('кресло', repeat = 4):
+    if z in 'крсл' and v in 'ео':
+        a+=1
+        print(z+x+c+v)
+print(a)

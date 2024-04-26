@@ -4,3 +4,10 @@
 начинаться с буквы К и не может содержать сочетания РОК.
 Сколько различных кодов может составить Вася?
 """
+from  itertools import *
+c = 0
+for z in permutations('igrok'):
+    s = ''.join(z)
+    if s[0] != 'k' and 'rok' not in s:
+        c+=1
+print(c)

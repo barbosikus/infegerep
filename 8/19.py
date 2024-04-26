@@ -15,3 +15,9 @@
 Под каким номером в списке идёт последнее слово, которое
 заканчивается на ИМ?
 """
+from  itertools import product
+a = 0
+for z,x,c,v in product('agilmort', repeat =4):
+    a+=1
+    if c == 'i' and v == 'm':
+        print(z+x+c+v, a)
