@@ -13,3 +13,7 @@
 w,x,y,z. В ответе запишите буквы w,x,y,z в том порядке, в котором
 идут соответствующие столбцы.
 """
+from itertools import  product
+for x,y,z,w in product((0,1), repeat = 4):
+    if not((y<=x) or not((x<=z) and (z<=x)) and not w):
+        print(y,w,z,x)

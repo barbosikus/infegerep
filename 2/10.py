@@ -13,3 +13,7 @@
 соответствующие им столбцы. Буквы в ответе пишите подряд, никаких
 разделителей между буквами ставить не нужно.
 """
+from itertools import  product
+for x,y,z in product((0,1), repeat = 3):
+    if not(x == (y <= z)):
+        print(x,y,z)

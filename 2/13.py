@@ -19,3 +19,7 @@
 Буквы в ответе пишите подряд, никаких разделителей между буквами
 ставить не нужно.
 """
+from itertools import  product
+for x,y,z,w in product((0,1), repeat = 4):
+    if ((w<=y) or not(y<=z)) and not x and not(x==z):
+        print(w,x,z,y)

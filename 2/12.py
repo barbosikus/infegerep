@@ -16,3 +16,7 @@
 второму столбцу, и т.д.). Буквы в ответе пишите подряд, никаких
 разделителей между буквами ставить не нужно.
 """
+from itertools import  product
+for x,y,z,w in product((0,1), repeat = 4):
+    if not w and ((y or z) <= ((not x) and y)):
+        print(w,z,y,x)
