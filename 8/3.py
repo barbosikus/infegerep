@@ -7,3 +7,8 @@
 Сколько существует таких слов, которые может написать Вася?
 """
 1215
+from itertools import *
+k=0
+for s in product("pula",repeat=6):
+    if s.count("u")==2:k+=1
+print(k)

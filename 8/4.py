@@ -8,3 +8,8 @@
 которые может написать Вася?
 """
 113
+from itertools import *
+k=0
+for s in product("lodka",repeat=4):
+    if s.count("o")>=2:k+=1
+print(k)
