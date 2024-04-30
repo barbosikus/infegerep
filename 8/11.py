@@ -9,3 +9,10 @@
 Сколько существует таких слов, которые может
 написать Вася?
 """
+from itertools import *
+c =0
+for z in product('vihna', repeat = 6):
+    s = ''.join(z)
+    if s.count('v')<=1 and s[0]!='h' and s[-1]!='i' and s[-1]!='a':
+        c+=1
+print(c)

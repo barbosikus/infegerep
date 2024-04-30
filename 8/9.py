@@ -3,3 +3,9 @@
 счисления, которые не оканчиваются цифрами 3 и 4 и не
 начинаются с цифры 1.
 """
+from itertools import *
+c = 0
+for z in product('01234', repeat= 6):
+    if z[-1]!= '3' and z[-1]!= '4' and z[0]!='1'and z[0]!='0':
+        c+=1
+print(c)

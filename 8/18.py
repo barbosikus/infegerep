@@ -13,5 +13,13 @@
 Под каким номером в списке идёт первое слово, которое начинается
 с буквы Л?
 """
+from itertools import *
+c= 0
+for z in product('elmru', repeat = 4):
+    c+=1
+    s = ''.join(z)
+    if s[0] == 'l':
+        print(c)
+        break
 
 
