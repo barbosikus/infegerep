@@ -23,3 +23,13 @@
 Сколько различных строк может получиться в результате
 работы алгоритма?
 """
+c = []
+def f(x):
+    while '555'in x or '888' in x:
+        x = x.replace('555', '8', 1)
+        x = x.replace('888', '55', 1)
+    return x
+for i in range(1, 1000):
+    print(f('5'*i))
+    c.append(f('5'*i))
+print(len(set(c)))

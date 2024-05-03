@@ -24,3 +24,13 @@
 
 В ответе запишите полученную строку.
 """
+def f(x):
+    while '25' in x or '355' in x or '4555' in x:
+        if '25' in x:
+            x = x.replace('25', '4')
+        if '355' in x:
+            x = x.replace('355', '2')
+        if '4555' in x:
+            x = x.replace('4555', '3')
+    return x
+print(f('2' + '5'*81))

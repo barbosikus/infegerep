@@ -14,7 +14,7 @@
 с буквы Л?
 """
 from itertools import *
-c= 0
+c = 0
 for z in product('elmru', repeat = 4):
     c+=1
     s = ''.join(z)

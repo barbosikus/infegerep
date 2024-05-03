@@ -11,3 +11,14 @@
 Найдите целое значение b, для которого после выполнения программы
 Чертёжник окажется в исходной точке.
 """
+from turtle import *
+tracer(0)
+for n1 in range(1, 100):
+    for b in range(-100, 100):
+        goto(3, -6)
+        for n in range(n1):
+            goto(xcor()+4, ycor()+b)
+            goto(xcor()+6, ycor()-6)
+        goto(xcor()-53, ycor()+26)
+        if xcor() == 0 and ycor() == 0:
+            print(b)

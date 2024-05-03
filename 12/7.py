@@ -26,3 +26,15 @@
 данной программы получилась строка, содержащая 28 единиц,
 34 двойки и 45 троек. Сколько единиц было в исходной строке?
 """
+def f(x):
+    while '01' in x or '02' in x or '03' in x:
+        x = x.replace('01', '302')
+        x = x.replace('02', '3103')
+        x = x.replace('03', '20')
+    return x
+for x in range(1,29):
+    for y in range(1, 35):
+        for z in range(1, 45):
+            w = f('0'+x*'1'+y*'2'+ z*'3')
+            if w.count('1')==28 and w.count('2')==34 and w.count('3')==45:
+                print(x)

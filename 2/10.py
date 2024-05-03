@@ -15,4 +15,5 @@
 """
 from itertools import  product
 for x,y,z in product((0,1), repeat = 3):
-        print(y, x,z, "1" if not(x == (y <= z)) else "0")
+        print(y,x,z,True if not(x == (y <= z)) else False)
+        '''ответ yxz'''

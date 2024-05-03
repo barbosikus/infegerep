@@ -5,3 +5,10 @@
 задать, если известно, что в коде присутствует ровно две буквы,
 а все другие символы являются цифрами.
 """
+from  itertools import *
+c = 0
+for z in product('123ab', repeat = 8):
+    s = ''.join(z)
+    if s.count('a') == 2 and s.count('b') == 0 or s.count('a') == 1 and s.count('b') == 1 or s.count('a') == 0 and s.count('b') == 2:
+        c+=1
+print(c)

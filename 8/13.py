@@ -4,3 +4,10 @@
 начинаться на букву А и заканчиваться буквой Е. Какое количество
 слов может составить ученица?
 """
+from itertools import *
+c = 0
+for z in product('gepard', repeat = 5):
+    s = ''.join(z)
+    if s.count('g')==1 and s[0]!='a' and s[4]!='e':
+        c+=1
+print(c)
