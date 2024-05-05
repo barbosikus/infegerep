@@ -12,3 +12,11 @@
     КОНЕЦ ПОКА
 КОНЕЦ
 """
+def f(x):
+    while '1' in x or '100' in x:
+        if '100' in x:
+            x = x.replace('100', '0001')
+        else:
+            x = x.replace('1', '00')
+    return x
+print(str(f('1'+'0'*33)).count('0'))

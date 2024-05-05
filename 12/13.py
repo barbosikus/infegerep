@@ -12,3 +12,14 @@
 Найдите целое значение b, для которого после выполнения программы
 Чертёжник окажется в точке (59; 46).
 """
+from turtle import *
+tracer(0)
+for n1 in range(1, 100):
+    for b in range(-100, 100):
+        goto(-3, -5)
+        for n in range(n1):
+            goto(xcor()+2, ycor()+b)
+            goto(xcor()+8, ycor()-12)
+        goto(xcor()+2, ycor()+3)
+        if xcor() == 59 and ycor() == 46:
+            print(b)

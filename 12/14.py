@@ -13,3 +13,14 @@
 программы Чертёжник окажется в точке (5; 3). Ответ запишите
 в виде двух чисел: сначала a, потом b.
 """
+from turtle import *
+tracer(0)
+for a in range(-40,40):
+    for b in range(-40, 40):
+        goto(-5,15)
+        for i in range(4):
+            goto(xcor() + 5, ycor()+1)
+            goto(xcor()+a, ycor()+b)
+        goto(xcor()+90, ycor()+4)
+        if xcor() == 5 and ycor()==3:
+            print(a,b)
