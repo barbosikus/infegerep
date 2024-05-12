@@ -24,3 +24,24 @@
 находиться внутри области, ограниченной линией, заданной данным
 алгоритмом. Точки на линии учитывать не следует.
 """
+from  turtle import *
+r = 50
+tracer(0)
+home()
+seth(90)
+begin_fill()
+for i in range(14):
+    for i in range(3):
+        fd(3*r)
+        right(90)
+    left(180)
+end_fill()
+pu()
+c = 0
+canvas = getcanvas()
+for x in range(-20, 20):
+    for y in range(-20, 20):
+        goto(x*r,y*r)
+        dot(3, 'white')
+update()
+mainloop()

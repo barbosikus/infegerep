@@ -27,3 +27,30 @@
 будут находиться внутри области, ограниченной линией,
 заданной данным алгоритмом. Точки на линии следует учитывать.
 """
+from  turtle import *
+tracer(0)
+seth(90)
+home()
+pd()
+r = 25
+begin_fill()
+fd(9*r)
+right(90)
+for i in range(2):
+    fd(3*r)
+    right(90)
+    fd(3 * r)
+    right(270)
+for i in range(2):
+    fd(3*r)
+    right(90)
+fd(9*r)
+end_fill()
+pu()
+for x in range(-20,20):
+    for y in range(-20,20):
+        goto(x*r,y*r)
+        dot(3,'white')
+update()
+mainloop()
+'''73'''
