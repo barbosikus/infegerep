@@ -22,3 +22,16 @@
 
 Определите площадь получившейся фигуры в квадратных единицах.
 """
+from turtle import *
+home()
+seth(90)
+tracer(0)
+r = 20
+for i in range(15):
+    fd(7*r)
+    right(30)
+    fd(8*r)
+    right(150)
+update()
+mainloop()
+'''s = sin30 * 8 * 7 = 28'''
