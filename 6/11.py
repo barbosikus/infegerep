@@ -27,3 +27,20 @@
 координатами (0, 0). Определите количество точек с целочисленными
 координатами, которые принадлежат начерченной линии.
 """
+from turtle import *
+tracer(0)
+home()
+r = 10
+for i in range(10):
+    goto(xcor()+4*r,ycor()+3*r)
+    goto(xcor()-4*r, ycor()+10*r)
+    goto(xcor() +18*r, ycor() - 12*r)
+    goto(xcor() - 24*r, ycor() - 12*r)
+pu()
+
+for x in range(-20,20):
+    for y in range(-20, 20):
+        goto(x*r,y*r)
+        dot(3, 'black')
+update()
+mainloop()
