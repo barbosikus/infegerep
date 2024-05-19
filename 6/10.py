@@ -26,3 +26,18 @@
 оставленной Чертёжником, если исполнитель стартует в точке с
 целочисленными координатами.
 """
+from turtle import *
+tracer(0)
+home()
+r = 25
+for i in range(15):
+    goto(xcor()+10*r,ycor()+10*r)
+    goto(xcor() + 3 * r, ycor() -6 * r)
+    goto(xcor() -9 * r, ycor() + 3 * r)
+penup()
+for x in range(-20,20):
+    for y in range(-20, 20):
+        goto(x*r,y*r)
+        dot(3,'black')
+mainloop()
+'''13*15=195'''

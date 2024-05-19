@@ -24,3 +24,18 @@
 координатами будут находиться внутри области, ограниченной линией,
 заданной данным алгоритмом. Точки на линии учитывать не следует.
 """
+from turtle import *
+tracer(0)
+home()
+r = 25
+for i in range(10):
+    goto(xcor()+3*r,ycor()+6*r)
+    goto(xcor()+7*r,ycor()-2*r)
+    goto(xcor()-10*r,ycor()-4*r)
+penup()
+for x in range(-20,20):
+    for y in range(-20, 20):
+        goto(x*r,y*r)
+        dot(3,'black')
+mainloop()
+'''22'''

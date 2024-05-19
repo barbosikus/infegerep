@@ -26,3 +26,19 @@
 Определите, площадь фигуры, которая будет получена в результате
 выполнения данного алгоритма.
 """
+from turtle import *
+tracer(0)
+home()
+r = 25
+for i in range(5):
+    goto(xcor()+5*r,ycor()+4*r)
+    goto(xcor() +4 * r, ycor() -4 * r)
+    goto(xcor() -7 * r, ycor() -2 * r)
+    goto(xcor() -2 * r, ycor() + 2 * r)
+penup()
+for x in range(-20,20):
+    for y in range(-20, 20):
+        goto(x*r,y*r)
+        dot(3,'black')
+mainloop()
+'''27'''
