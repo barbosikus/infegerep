@@ -27,3 +27,17 @@
 
 Определите площадь получившейся фигуры в квадратных единицах.
 """
+from turtle import *
+tracer(0)
+home()
+seth(90)
+r = 15
+for i in range(8):
+    for i in range(4):
+        fd(5*r)
+        right(30)
+        fd(6*r)
+        right(150)
+    right(60)
+mainloop()
+'''3*5*5=75'''

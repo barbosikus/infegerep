@@ -26,3 +26,29 @@
 находиться внутри области, ограниченной линией, заданной данным
 алгоритмом. Точки на линии учитывать не следует.
 """
+from turtle import *
+tracer(0)
+home()
+seth(90)
+r = 5
+begin_fill()
+right(180)
+fd(5*r)
+rt(90)
+fd(50*r)
+rt(90)
+fd(5*r)
+for i in range(5):
+    seth(90)
+    circle(-5*r, 180)
+end_fill()
+canvas = getcanvas()
+c = 0
+for x in range(-100,100):
+    for y in range(-100, 100):
+        s = canvas.find_overlapping(x*r,y*r,x*r,y*r)
+        if s !=() and s == (5,):
+            c+=1
+            print(s,c)
+update()
+mainloop()

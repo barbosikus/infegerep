@@ -26,3 +26,18 @@
 выполнения данного алгоритма. В ответе укажите только целую часть
 полученного значения.
 """
+from turtle import *
+tracer(0)
+home()
+r = 25
+for i in range(5):
+    goto(xcor()+6*r,ycor()+8*r)
+    goto(xcor() - 8 * r, ycor() +4 * r)
+    goto(xcor() +2 * r, ycor() -12 * r)
+penup()
+for x in range(-20,20):
+    for y in range(-20, 20):
+        goto(x*r,y*r)
+        dot(3,'black')
+mainloop()
+'''31'''
