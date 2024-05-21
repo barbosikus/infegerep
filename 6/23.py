@@ -37,3 +37,27 @@
 Определите количество точек с целочисленными координатами,
 которые находятся внутри полученного в ходе выполнения алгоритма контура.
 """
+from turtle import *
+tracer(0)
+home()
+r = 20
+begin_fill()
+seth(90)
+for i in range(7):
+    fd(10*r)
+    for i in range(4):
+        seth(90)
+        circle(2*r,180)
+    for i in range(4):
+        seth(270)
+        circle(2 * r, 180)
+end_fill()
+canvas = getcanvas()
+c = 0
+for x in range(-20,20):
+    for y in range(-20, 20):
+        s = canvas.find_overlapping(x*r,y*r,x*r,y*r)
+        if s==(5,):
+            c+=1
+            print(c)
+mainloop()

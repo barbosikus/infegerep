@@ -7,3 +7,12 @@ F(n) = 2⋅F(n−1) если n > 1.
 
 Чему равно значение выражения F(1900)/2¹⁸⁹⁰?
 """
+from sys import *
+
+def f(n):
+    if n ==1:
+        return 2
+    if n>1:
+        return 2*f(n-1)
+setrecursionlimit(2000)
+print(f(1900)//2**1890)

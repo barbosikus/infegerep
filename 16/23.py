@@ -7,3 +7,10 @@ F(n) = F(n+1) + 5n + 2, если n <= 100000
 
 Чему равно значение функции F(3)−F(7)?
 """
+from sys import *
+def f(n):
+    if n>100000:
+        return n
+    if n<=100000:
+        return f(n+1)+5*n+2
+print(f(3)-f(7))

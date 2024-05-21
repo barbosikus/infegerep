@@ -30,3 +30,30 @@
 находиться внутри области, ограниченной линией, заданной данным алгоритмом.
 Точки на линии учитывать не следует.
 """
+from turtle import *
+tracer(0)
+home()
+
+r = 20
+begin_fill()
+for i in range(5):
+    seth(0)
+    circle(5*r, 180)
+    seth(90)
+    circle(5*r,180)
+    seth(180)
+    circle(5 * r, 180)
+    seth(270)
+    circle(5 * r, 180)
+end_fill()
+canvas = getcanvas()
+c = 0
+for x in range(-20,20):
+    for y in range(-20, 20):
+        s = canvas.find_overlapping(x*r,y*r,x*r,y*r)
+        if s==(5,):
+            c+=1
+            print(c)
+
+
+mainloop()
