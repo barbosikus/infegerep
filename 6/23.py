@@ -41,23 +41,28 @@ from turtle import *
 tracer(0)
 home()
 r = 20
+screensize(2000,10000)
 begin_fill()
 seth(90)
 for i in range(7):
     fd(10*r)
     for i in range(4):
         seth(90)
-        circle(2*r,180)
+        circle(2 * r, -180)
+    bk(10*r)
     for i in range(4):
         seth(270)
-        circle(2 * r, 180)
+        circle(2 * r, -180)
 end_fill()
 canvas = getcanvas()
 c = 0
+up()
 for x in range(-20,20):
-    for y in range(-20, 20):
-        s = canvas.find_overlapping(x*r,y*r,x*r,y*r)
-        if s==(5,):
-            c+=1
-            print(c)
+    for y in range(-20, 200):
+        goto(x*r, y*r)
+        dot(3, 'blue')
+        # s = canvas.find_overlapping(x*r,y*r,x*r,y*r)
+        # if s==(5,):
+        #     c+=1
+        #     print(c)
 mainloop()
