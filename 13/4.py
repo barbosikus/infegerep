@@ -13,3 +13,4 @@ from ipaddress import *
 for i in range(33):
     s = ip_network(f'122.21.49.91/{i}',0)
     print(s)
+'''23'''
