@@ -40,4 +40,4 @@ for x in range(-20,20):
         goto(x*r,y*r)
         dot(3,'black')
 mainloop()
-'''7*7-6= 43'''
+'''7*8-6= 43'''
