@@ -15,3 +15,5 @@ IP-адрес: 10.8.248.131
 A   B    C    D   E   F    G    H
 8  131  255  224  0   10  248   92
 """
+from ipaddress import *
+print(ip_network('10.8.248.131/255.255.224.0',0))

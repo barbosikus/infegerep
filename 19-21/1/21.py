@@ -7,3 +7,14 @@
 – у Вани нет стратегии, которая позволит ему гарантированно
   выиграть первым ходом.
 """
+def f(s,y):
+    if s>=34:
+        return y%2
+    if y==0:
+        return 0
+    m = [f(s+1,y-1),f(s+2,y-1),f(s+3,y-1),f(s*2,y-1)]
+    if y%2==1: return any(m)
+    else:
+        return all(m)
+for s in range(1,34):
+    print(f(s,4), s)

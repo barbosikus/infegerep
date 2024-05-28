@@ -6,3 +6,12 @@
 
 тождественно истинна при любых целых положительных х?
 """
+def mod(m,n):
+    return (m%4!=3 or m%6!=1)<=(m%36!=n)
+for a in range(1, 10000):
+    c = 0
+    for x in range(1,10000):
+        if mod(x,a) == 0:
+            c=1
+    if c ==0:
+        print(a)

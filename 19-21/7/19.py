@@ -10,3 +10,23 @@
 после неудачного хода Пети. Укажите минимальное значение S, при
 котором это возможно.
 """
+def f(a,b,c,d, m):
+    if a+b+c>=73:
+        return d%2==m%2
+    if d==m:
+        return 0
+    h = [f(a+3,b,c,d+1,m),
+         f(a+13,b,c,d+1,m),
+         f(a+23,b,c,d+1,m),
+         f(a,b+3,c,d+1,m),
+         f(a,b+13,c,d+1,m),
+         f(a,b+23,c,d+1,m),
+         f(a,b,c+3,d+1,m),
+         f(a,b,c+13,d+1,m),
+         f(a,b,c+23,d+1,m)]
+    return any(h) if (d+1)%2==m%2 else all(h)
+for s in range(1,24):
+    for m in range(1,5):
+        if f(2,s,2*s,0,m):
+            print(s,m)
+            break

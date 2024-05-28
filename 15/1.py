@@ -8,3 +8,8 @@
 тождественно истинна (то есть принимает значение 1 при любом
 натуральном значении переменной х)?
 """
+def dell(n,m):
+    return n%m==0
+for a in range(1,30):
+    if all(((dell(x,a) and dell(x,24)and not dell(x,16))<=int(not dell(x,a))) for x in range(1,10000)):
+        print(a)

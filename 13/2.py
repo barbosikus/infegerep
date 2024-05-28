@@ -9,3 +9,8 @@
 Чему равно значение третьего слева байта маски?
 Ответ запишите в виде десятичного числа.
 """
+from ipaddress import *
+for i in range(33):
+    s = ip_network(f'118.193.30.139/{i}',0)
+    print(s)
+    print(s.netmask)
