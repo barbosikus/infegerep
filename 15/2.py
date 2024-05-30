@@ -5,3 +5,9 @@
 
 (¬ДЕЛ(x,84) ∨ ¬ДЕЛ(x,90)) -> ¬ДЕЛ(x, A)
 """
+def dell(n,m):
+    return n%m==0
+for a in range(1,100000):
+    if all((not(dell(x,84)) or not(dell(x,90)))<=(not(dell(x,a))) for x in range(1,10000)):
+        print(a)
+'''1260'''

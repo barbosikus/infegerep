@@ -8,3 +8,9 @@
 тождественно истинна (то есть принимает значение 1 при любом
 натуральном значении переменной х)?
 """
+def dell(n,m):
+    return n%m==0
+for a in range(1,1000):
+    if all(dell(a,7) and (dell(240,x)<=((not(dell(a,x))) <= (not(dell(780,x))))) for x in range(1,10000)):
+        print(a)
+'''420'''
