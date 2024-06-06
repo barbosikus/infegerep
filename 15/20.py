@@ -7,3 +7,10 @@
 
 истинно (т.е. принимает значение 1) при любом значении переменной х.
 """
+b = list(range(18,53))
+c = list(range(16,42))
+a = []
+for x in range(1,100000):
+    if not((x in b) <= (x in a)) and (not(x in c) or (x in a)):
+        a.append(x)
+print(len(a))

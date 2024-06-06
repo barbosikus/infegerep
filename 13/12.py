@@ -11,4 +11,15 @@
 
 В ответе укажите только число.
 """
-299
+from ipaddress import *
+net = ip_network('10.48.96.0/255.255.240.0',0)
+b = ''
+c = 0
+for i in net:
+    b = f'{i:b}'
+    if b.count('1')>b.count('0'):
+        c+=1
+print(c)
+
+
+

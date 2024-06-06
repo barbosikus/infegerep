@@ -6,3 +6,12 @@
 7, 17, 19, 27. Найдите количество таких чисел и
 максимальное из них.
 """
+f = open('1.txt')
+a = f.read()
+f.close()
+a = map(int,a.split('\n')[:-1])
+c = []
+for i in a:
+    if i%3==0 and i%7!=0 and i%17!=0 and i%19!=0 and i%27!=0:
+        c.append(i)
+print(max(c),  len(c))
