@@ -31,7 +31,7 @@ from turtle import *
 tracer(0)
 home()
 seth(90)
-r = 15
+r = 25
 for i in range(8):
     for i in range(4):
         fd(5*r)
