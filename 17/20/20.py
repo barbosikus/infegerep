@@ -9,3 +9,13 @@
 задаче под парой подразумевается два идущих подряд элемента
 последовательности.
 """
+f = [int(q) for q in open('20.txt')]
+a = sum([sum(map(int,str(a))) for a in f if a%35==0])
+a1 = [a for a in f if a%35==0]
+c = 0
+b = []
+for i,g in zip(f,f[1:]):
+    if ((i>a and g<a) and hex(g)[-2]=="e" and hex(g)[-1]=="f") or ((i<a and g>a) and hex(i)[-2]=="e" and hex(i)[-1]=="f"):
+        c+=1
+        b.append(i+g)
+print(c, min(b))
