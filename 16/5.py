@@ -7,3 +7,11 @@ F(n) = 2n + 1 + F(n−1) + 2F(n−2) если n >= 5 и n не делится н
 
 Чему равно значение функции F(15)?
 """
+def f(n):
+    if n<5:
+        return 1+2*n
+    if n>=5 and n%3==0:
+        return 2*(n+1)*f(n-2)
+    if n>=5 and n%3!=0:
+        return 2*n + 1+f(n-1)+2*f(n-2)
+print(f(15))

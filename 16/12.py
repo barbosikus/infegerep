@@ -7,3 +7,13 @@ F(n) = F(n−1) − F(n−2) + 3n при n > 1
 
 Чему равно значение функции F(40)? В ответе запишите только целое число.
 """
+from functools import *
+@lru_cache(None)
+def f(n):
+    if n == 0:
+        return 1
+    if n ==1:
+        return 3
+    if n>1:
+        return f(n-1)-f(n-2)+3*n
+print(f(40))

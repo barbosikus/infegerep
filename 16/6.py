@@ -8,3 +8,11 @@ F(n) = 2F(n−2)     если n >  1 и при этом n нечётно.
 
 Чему равно значение функции F(31)?
 """
+def f(n):
+    if n<=1:
+        return 1
+    if n>1 and n%2==0:
+        return 3*n + f(n-1)
+    if n>1 and n%2!=0:
+        return 2*f(n-2)
+print(f(31))
