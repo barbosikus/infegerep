@@ -16,3 +16,9 @@
 
 Количество строк для записи ответа избыточно.
 """
+for i in range(150_000,99_999_999):
+    c = [g for g in range(1,int(i**0.5)+1) if i%g==0]
+    c+=[i//j for j in c]
+    c = sorted(list(set(c)))
+    if sum(c)%13==10:
+        print(i,sum(c))

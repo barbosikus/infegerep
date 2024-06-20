@@ -9,3 +9,18 @@
 в порядке возрастания этих трех делителей.
 Делители в строке таблицы также должны следовать в порядке возрастания.
 """
+from functools import *
+@lru_cache(None)
+def f():
+    for i in range(81234,134690):
+        c=[]
+        n = []
+        for g in range(2, int(i**0.5)+1):
+            if i%g==0:
+                c.append(g)
+        for j in c:
+            n.append(i//j)
+        c+=n
+        if len(set(c)) == 3:
+            print(*c)
+f()

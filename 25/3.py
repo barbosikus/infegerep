@@ -6,3 +6,14 @@
 В ответе для каждого найденного числа
 запишите два его наибольших делителя в порядке возрастания.
 """
+for i in range(154026,154044):
+    c = []
+    n = []
+    for g in range(1,int(i**0.5)+1):
+        if i%g==0:
+            c.append(g)
+    for j in c:
+        n.append(i//j)
+    c+=n
+    if len(set(c)) == 4:
+        print(*sorted(c)[2:])

@@ -9,3 +9,12 @@
 число и максимальный делитель,
 оканчивающийся на семь и не равный самому числу.
 """
+for i in range(550001,9999999):
+    c = [g for g in range(2,int(i**0.5)+1) if i%g==0]
+    c+=[i//j for j in c]
+    c = sorted(list(set(c)))
+    c = list(map(lambda c1: c1 if c1%10==7 else 0, c))
+    while 0 in c:
+        c.remove(0)
+    if len(c) == 3:
+        print(i, sorted(c)[-1])
