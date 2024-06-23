@@ -27,3 +27,11 @@
 КОНЕЦ ПОКА
 КОНЕЦ
 """
+def f(x):
+    while '33333' in x or '999' in x:
+        if '33333' in x:
+            x = x.replace('33333','99',1)
+        else:
+            x = x.replace('999','3',1)
+    return x
+print(f('9'*100))

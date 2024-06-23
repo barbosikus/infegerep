@@ -7,3 +7,11 @@ F(n)=n×F(n–1), если n>1.
 
 Чему равно значение выражения (2×F(2024)+F(2023))/F(2022)?
 """
+import sys
+sys.setrecursionlimit(100000)
+def f(n):
+    if n ==1:
+        return 1
+    if n>1:
+        return n*f(n-1)
+print((2*f(2024)+f(2023))//f(2022))

@@ -15,3 +15,20 @@
 в первом столбце таблицы все найденные числа в порядке возрастания,
 а во втором столбце — соответствующие им частные от деления на 169.
 """
+from itertools import *
+c = []
+for x,y,z in product(range(10), repeat = 3):
+    s = int(f'123{x}{y}567{z}')
+    if s % 169 == 0:
+        c.append(s)
+for x,y in product(range(10), repeat = 2):
+    s = int(f'123{x}567{y}')
+    if s % 169 == 0:
+        c.append(s)
+for x in range(10):
+    s = int(f'123567{x}')
+    if s % 169 == 0:
+        c.append(s)
+for i in sorted(c):
+    print(i,i//169)
+

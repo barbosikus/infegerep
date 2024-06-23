@@ -15,3 +15,29 @@
 в первом столбце таблицы все найденные числа в порядке возрастания,
 а во втором столбце — соответствующие им частные от деления на 51.
 """
+from itertools import *
+c = []
+for x,y in product(range(10), repeat = 2):
+    s = int(f'12{x}45{y}')
+    if s%51 == 0:
+        c.append(s)
+for x,y in product(range(10), repeat = 2):
+    s = int(f'12{x}{y}45')
+    if s%51 == 0:
+        c.append(s)
+for x,y in product(range(10), repeat = 2):
+    s = int(f'1245{x}{y}')
+    if s%51 == 0:
+        c.append(s)
+for x in range(10):
+    s = int(f'12{x}45')
+    if s%51 == 0:
+        c.append(s)
+for x in range(10):
+    s = int(f'1245{x}')
+    if s%51 == 0:
+        c.append(s)
+if 1245%51==0:
+    c.append(1245)
+for i in sorted(c):
+    print(i,i//51)

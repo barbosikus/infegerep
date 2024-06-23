@@ -4,3 +4,10 @@
 выражение (x∈P)→(((x∈Q)∧¬(x∈A))→¬(x∈P)) истинно (т.е. принимает значение 1)
 при любом значении переменной х.
 """
+p = list(range(15,41))
+q = list(range(21,64))
+a = []
+for x in range(1,9999999):
+    if (x in p)<=(((x in q) and (x not in a))<= (x not in p)):
+        a.append(x)
+print(len(a))

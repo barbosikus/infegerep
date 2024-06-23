@@ -12,3 +12,11 @@
 Запишите в ответе найденные числа в порядке возрастания,
 справа от каждого числа запишите сумму его чётных делителей.
 """
+from fnmatch import *
+for i in range(65000,10**7):
+    if fnmatch(str(i), '6*97*5?'):
+        c = [g for g in range(1, int(i**0.5)+1) if i%g == 0 and g%2==0]
+        c+= [i//j for j in c]
+        c = set(c)
+        if len(c)>=4:
+            print(i, sum(c))

@@ -14,3 +14,16 @@
 
 Например, для числа 20 S = 2 + 5 =7
 """
+for i in range(500000,1,-1):
+    c = [g for g in range(2, int(i**0.5)+1) if i%g==0]
+    c += [i//j for j in c]
+    c = sorted(list(set(c)))
+    t = []
+    for h in c:
+        delh = [k for k in range(2,int(h**0.5)+1) if h%k==0]
+        delh+= [h//j for j in delh]
+        if len(delh) == 0:
+            t.append(h)
+    s = sum(t)
+    if s!=0 and s%10==0:
+        print(i,s)

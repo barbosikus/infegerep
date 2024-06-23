@@ -17,3 +17,21 @@
 а во втором столбце –
 соответствующие им результаты деления этих чисел на 141.
 """
+from itertools import *
+c =[]
+for x in product(range(10), repeat = 3):
+    s = int(f'1234{x[0]}{x[1]}{x[2]}7')
+    if s%141==0:
+        c.append(s)
+for x in product(range(10), repeat = 2):
+    s = int(f'1234{x[0]}{x[1]}7')
+    if s%141==0:
+        c.append(s)
+for x in product(range(10), repeat = 1):
+    s = int(f'1234{x[0]}7')
+    if s%141==0:
+        c.append(s)
+if 12347%141==0:
+    c.append(12347)
+for i in sorted(c):
+    print(i, i//141)

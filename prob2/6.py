@@ -31,3 +31,30 @@
 Определите периметр области пересечения фигур, ограниченных
 заданными алгоритмом линиями.
 """
+from turtle import *
+tracer(0)
+seth(0)
+r = 30
+for i in range(9):
+    fd(22*r)
+    right(90)
+    fd(6*r)
+    right(90)
+pu()
+fd(1*r)
+right(90)
+fd(5*r)
+left(90)
+pd()
+for i in range(9):
+    fd(53*r)
+    right(90)
+    fd(75*r)
+    right(90)
+pu()
+for x in range(-30,30):
+    for y in range(-30,30):
+        goto(x*r,y*r)
+        dot(3,'red' )
+mainloop()
+'''44'''
