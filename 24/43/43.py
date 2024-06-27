@@ -7,3 +7,9 @@
 
 В качестве ответа запишите разницу между ними.
 """
+f = open('43.txt')
+a = f.readline()
+b = []
+for i in range(ord('A'), ord('Z')+1):
+    b.append(a.count(chr(i)))
+print(max(b) - min(b))

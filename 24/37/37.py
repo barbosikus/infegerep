@@ -10,3 +10,10 @@
 
 Примечание: символы в латинице или в английской раскладке
 """
+f = open('37.txt')
+a = f.readlines()
+c = 0
+for i in a:
+    if i.count('A')*1.05<=i.count('B'):
+        c+=1
+print(c)

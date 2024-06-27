@@ -5,3 +5,7 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('29.txt')
+a = f.readline()
+f.close()
+print(a.count('TIK')+a.count('TOK'))

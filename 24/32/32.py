@@ -4,3 +4,8 @@
 Сколько раз в файле встречается последовательность цифр,
 формирующая римскую цифру девятнадцать (XIX)?
 """
+f = open('32.txt')
+a = f.readline()
+while 'XIXIX' in a:
+    a = a.replace('XIXIX', 'XIXXIX')
+print(a.count('XIX'))

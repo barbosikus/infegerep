@@ -13,3 +13,10 @@
 Если таких символов несколько, выведите тот,
 который стоит раньше в алфавите.
 """
+f = open('44.txt')
+a = f.readline()
+d = [0]*26
+for z,x,y in zip(a, a[1:], a[2:]):
+    if z == y:
+        d[ord(x)-ord('A')]+=1
+print(chr(ord('A') + d.index(max(d))), max(d), sep = '')

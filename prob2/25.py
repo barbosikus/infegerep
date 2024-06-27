@@ -12,9 +12,10 @@
 Например, для числа 20 M = 2 + 10 = 12.
 """
 for i in range(800_000,1_000_000):
-    c = [g for g in range(2, int(i**0.5)+1)]
+    c = [g for g in range(2, int(i**0.5)+1) if i%g==0]
     c+=[i//j for j in c]
     c = sorted(list(set(c)))
-    m = c[0]+c[-1]
+    if len(c)>=2:
+        m = c[0]+c[-1]
     if str(m)[-1]=='4':
         print(i,m)

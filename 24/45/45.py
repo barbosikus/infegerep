@@ -9,3 +9,10 @@
 которая чаще всего встречается на месте "*",
 затем количество подходящих комбинаций c этой буквой.
 """
+f = open('45.txt')
+a = f.readline()
+d = [0]*26
+for z,x,y,w,u in zip(a, a[1:], a[2:], a[3:],a[4:]):
+    if z == u == 'C' and x==w == 'B':
+        d[ord(y) - ord('A')]+=1
+print(chr(d.index(max(d)) + ord('A')), max(d), sep='' )

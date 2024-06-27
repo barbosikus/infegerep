@@ -33,3 +33,12 @@ BAQTUB
 
 
 """
+f = open('46.txt')
+a = f.readlines()
+q = [i.count('Q') for i in a]
+s = a[::-1][q[::-1].index(max(q))]
+b = []
+for g in range(ord('A'), ord('Z')+1):
+    b.append(s.count(chr(g)))
+b = [i if i!=0 else 9999 for i in b ]
+print(chr(b.index(min(b)) + ord('A')), ''.join(a).count(chr(b.index(min(b)) + ord('A'))))

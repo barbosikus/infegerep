@@ -8,6 +8,6 @@ p = list(range(15,41))
 q = list(range(21,64))
 a = []
 for x in range(1,9999999):
-    if (x in p)<=(((x in q) and (x not in a))<= (x not in p)):
+    if not((x in p)<=(((x in q) and (x not in a))<= (x not in p))):
         a.append(x)
 print(len(a))

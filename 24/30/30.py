@@ -6,3 +6,9 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('30.txt')
+a = f.readline()
+f.close()
+while 'STOCK' in a:
+    a = a.replace('STOCK', '')
+print(a.count('OCK'))

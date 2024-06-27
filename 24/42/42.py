@@ -12,3 +12,9 @@ B - 4 раза и С - 4 раза.
 в ответе для этого случая надо написать B4
 (без пробелов и других разделителей).
 """
+f = open('42.txt')
+a = f.readline()
+b = []
+for i in range(ord('A'), ord('Z') + 1):
+    b.append(a.count(chr(i)))
+print(chr(ord('A')+b.index(max(b))), max(b), sep='')

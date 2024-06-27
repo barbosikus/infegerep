@@ -8,3 +8,10 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('31.txt')
+a = f.readline()
+while 'JBOSS' in a or 'BOSSJ' in a or 'JBOSSJ' in a:
+    a = a.replace('BOSSJ',' ')
+    a = a.replace('JBOSSJ', ' ')
+    a = a.replace('JBOSS', ' ')
+print(a.count('BOSS'))
