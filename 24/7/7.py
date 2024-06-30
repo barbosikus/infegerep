@@ -11,3 +11,6 @@ NPO или PNO в прилагаемом файле.
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('7.txt')
+a = f.readline().replace('NPO','*').replace('PNO','*').replace('N','#').replace('P','#').replace('O','#').split('#')
+print(len(max(a, key = len)))

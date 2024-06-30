@@ -4,3 +4,9 @@
 
 Укажите длину самой длинной последовательности, состоящей из цифр.
 """
+f = open('3.txt')
+a = f.readline()
+for i in range(ord('a'), ord('z')):
+    a = a.replace(chr(i), 'z')
+a = a.split('z')
+print(len(max(a, key = len)))

@@ -11,3 +11,9 @@
 есть три подходящие подпоследовательности PCCSGOPC, PCPC и CSGOPC.
 Максимальная длина – 8.
 """
+f = open('16.txt')
+a = f.readline().replace('PC', '*').replace('CSGO', '*')
+for i in range(ord('A'), ord('Z')+1):
+    a = a.replace(chr(i), '#')
+a = a.split('#')
+print(len(max(a, key = len)))

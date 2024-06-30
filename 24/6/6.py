@@ -6,3 +6,6 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('6.txt')
+a = f.readline().replace('XZZY', 'XZZ*ZZY').split('*')
+print(len(max(a, key = len)))

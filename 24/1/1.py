@@ -5,3 +5,8 @@ A, B, C, D, E, F.
 Найдите длину самой длинной подцепочки,
 состоящей из символов A, B, E, F (в произвольном порядке).
 """
+f = open('1.txt')
+a = f.readline()
+a = a.replace('C', 'D')
+a = a.split('D')
+print(len(max(a, key = len)))

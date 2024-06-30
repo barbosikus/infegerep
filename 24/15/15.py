@@ -10,3 +10,6 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('15.txt')
+a = f.readline().replace('BB', '*').replace('DD', '*').replace('A', '#').replace('B', '#').replace('D', '#').split('#')
+print(len(max(a, key = len)))

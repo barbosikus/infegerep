@@ -10,3 +10,15 @@
 
 Если таких последовательностей несколько, запишите первую из них.
 """
+f = open('14.txt')
+a = f.readline()
+c = a[0]
+b = ''
+for x,y in zip(a, a[1:]):
+    if ord(x)>ord(y):
+        c += y
+    else:
+        print(c)
+        b = max(b,c, key = len)
+        c = y
+print(len(b))

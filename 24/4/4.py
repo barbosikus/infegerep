@@ -7,3 +7,7 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('4.txt')
+a = f.readline()
+a = a.replace('XY', 'X*Y').replace('XZ', 'X*Z').split('*')
+print(len(max(a, key = len)))

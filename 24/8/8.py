@@ -6,3 +6,7 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('8.txt')
+a = f.readline().replace('BA', '*').replace('CA', '*').replace('DA', '*').replace('BO', '*').replace('CO', '*')\
+.replace('DO', '*').replace('A', '#').replace('B', '#').replace('C', '#').replace('D', '#').replace('O', '#').split('#')
+print(len(max(a, key = len)))

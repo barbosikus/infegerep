@@ -6,3 +6,9 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('5.txt')
+a = f.readline()
+while 'PP' in a:
+    a = a.replace('PP', 'P*P')
+a = a.split('*')
+print(len(max(a, key = len)))

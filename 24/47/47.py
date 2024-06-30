@@ -39,23 +39,18 @@ f = open('47.txt')
 a = f.readlines()
 arr = []
 for i in a:
-    ind = 1
     c = 1
     b = []
-    while ind < len(a):
-        try:
-            if i[ind] == i[ind-1]:
-                c+=1
-            else:
-                b.append(c)
-                c = 1
-            ind +=1
-        except:
-            break
+    for ind in range(1, len(i)):
+        if i[ind] == i[ind-1]:
+            c+=1
+        else:
+            b.append(c)
+            c = 1
     b.append(c)
     arr.append(max(b))
 b = []
 s = a[arr.index(max(arr))]
 for g in range(ord('A'), ord('Z')+1):
     b.append(s.count(chr(g)))
-print(chr(b.index(min(b)) + ord('A')), ''.join(a).count(chr(b.index(min(b)) + ord('A'))))
+print(chr(b.index(max(b)) + ord('A')), ''.join(a).count(chr(b.index(max(b)) + ord('A'))), sep = '')

@@ -4,3 +4,4 @@
 
 Определите максимальное количество идущих подряд цифр.
 """
+print(max(len(n) for n in open('2.txt').readline().replace('B', 'A').replace('C', 'A').split('A')))

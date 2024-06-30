@@ -6,3 +6,6 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('11.txt')
+a = f.readline().replace('XX', 'X*X').replace('XX', 'X*X').replace('YY', 'Y*Y').replace('YY', 'Y*Y').replace('ZZ', 'Z*Z').replace('ZZ', 'Z*Z').split('*')
+print(len(max(a, key = len)))
