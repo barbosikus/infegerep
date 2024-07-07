@@ -29,4 +29,30 @@
 внутри объединения фигур, ограниченного заданными алгоритмом линиями, включая
 точки на линиях.
 """
-
+from turtle import *
+tracer(0)
+seth(90)
+r = 15
+for i in range(2):
+    fd(23*r)
+    left(90)
+    back(27*r)
+    left(90)
+pu()
+back(5*r)
+right(90)
+fd(11*r)
+left(90)
+pd()
+for i in range(2):
+    fd(26*r)
+    right(90)
+    fd(32*r)
+    right(90)
+pu()
+for x in range(-20,40):
+    for y in range(-20, 40):
+        goto(x*r,y*r)
+        dot(3,'red')
+mainloop()
+print(22*17)
