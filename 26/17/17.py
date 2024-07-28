@@ -33,3 +33,13 @@ N строках находятся значения объёмов файлов
 размером 80 и 50, на втором – 10, 30, 45. Поэтому ответ для приведённого
 примера: 2 3
 """
+f = open('17.txt')
+k = int(f.readline())
+s, q1, q2 = sorted([int(i) for i in f]), [], []
+
+while s != []:
+    q1.append(s.pop(len(s) - 1))
+    while sum(q2) <= sum(q1):
+        q2.append(s.pop(0))
+
+print(len(q1), len(q2))
