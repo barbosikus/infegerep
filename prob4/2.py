@@ -18,3 +18,7 @@ F = (a→b)∧(b→c)∧(c→d)
 и т. д.). Буквы в ответе пишите подряд, никаких разделителей
 между буквами ставить не нужно.
 """
+from itertools import *
+for a,b,c,d in product((0,1), repeat = 4):
+    if (a<=b) and (b<=c) and (c<=d):
+        print(a,c,d,b)

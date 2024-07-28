@@ -17,3 +17,21 @@
 числа 10000. В ответе запишите это число в десятичной системе
 счисления.
 """
+def pyat(x):
+    b = ''
+    while x>0:
+        b+=str(x%5)
+        x//=5
+    b = b[::-1]
+    return(b)
+c = []
+for n in range(1,1000):
+    b = pyat(n)
+    if n%25==0:
+        b = b[-3:] + b
+    else:
+        b = b + pyat(n%25)
+    res = int(b,5)
+    if res>10000:
+        c.append(n)
+print(min(c))

@@ -32,3 +32,20 @@
 При таких условиях имеется три простоя: 0-200; 730-900; 950-1200.
 Поэтому ответ для приведённого примера 3 250.
 """
+f = open('23.txt')
+a = [list(map(int,q.split())) for q in f][1:]
+l = 2500000
+m = 1500
+x = [0]*l
+for i in a:
+    for g in range(i[0], i[0]+i[1]):
+        x[g]=1
+c = 0
+n = 0
+x = ''.join(map(str,x)).split('1')
+for i in x:
+    if len(i)>=m:
+        c+=1
+        n = max(n, len(i))
+print(c, n)
+

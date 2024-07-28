@@ -25,3 +25,28 @@
 находиться внутри области, ограниченной линией, заданной данным
 алгоритмом. Точки на линии учитывать не следует.
 """
+from turtle import *
+home()
+tracer(0)
+seth(90)
+r = 25
+right(60)
+fd(4*r)
+right(120)
+for i in range(4):
+    fd(3 * r)
+    right(240)
+    fd(3 * r)
+    right(120)
+fd(4*r)
+right(90)
+fd(8*(3**0.5)*r)
+right(90)
+fd(8*r)
+pu()
+for x in range(-20,20):
+    for y in range(-20, 20):
+        goto(x*r,y*r)
+        dot(3, 'red')
+mainloop()
+'''78'''

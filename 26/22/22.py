@@ -37,3 +37,20 @@
 от 10 до 40 и от 50 до 180. Их общая длина 30 + 130.
 Поэтому ответ для приведённого примера 2 160.
 """
+f = open('22.txt')
+a = [list(map(int,q.split())) for q in f][1:]
+x = [0]*2*10**6
+for i in a:
+    for g in range(i[0], i[1]):
+        x[g]=1
+x = ''.join(map(str,x))
+x = x.split('0')
+s = 0
+m = 0
+for i in x:
+    if i!='':
+        s += len(i)
+        m+=1
+print(m,s)
+
+

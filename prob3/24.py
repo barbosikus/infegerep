@@ -13,4 +13,5 @@
 Для выполнения этого задания следует написать программу.
 """
 f = open('24.txt')
-a = f.readline().replace('RSQ', '*')
+a = f.readline().replace('RSQ', '***').replace('SQ*', '***').replace('Q**', '***').replace('**R', '***').replace('*RS', '***').replace('R', '#').replace('S', '#').replace('Q', '#').split('#')
+print(len(max(a, key = len)))

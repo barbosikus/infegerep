@@ -36,3 +36,18 @@ N – количество пользователей (натуральное ч
 Объёмы этих трех файлов 80, 5 и 10. Последний выбранный файл имеет
 размер 10 , поэтому ответ для приведённого примера: 3 10
 """
+'''f = open('16.txt')
+s,n = map(int,f.readline().split())
+a,b = [int(q) for q in f], []'''
+s, n = 100, 5
+a = [80,30,10,5,7]
+a = sorted(a)
+b = []
+while a[0]+sum(b)<= s:
+    for r in range(len(a)-1, 0, -1):
+        if a[r]<=(s - sum(b)):
+            b.append(a.pop(r))
+            break
+    if a[0]<=(s - sum(b)):
+        b.append(a.pop(0))
+print(len(b), b[-1])

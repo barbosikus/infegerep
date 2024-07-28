@@ -29,3 +29,16 @@
 9 и 11 (среднее арифметическое 10), 8 и 16 (среднее арифметическое 12).
 В ответе надо записать числа 4 и 9.
 """
+from itertools import *
+f = open('19.txt')
+a = [int(q) for q in f][1:]
+a = sorted(a)
+c = 0
+m = float('inf')
+for x,y in combinations(a, r = 2):
+    if (x+y)%2==0:
+        ar = (x+y)//2
+        if a[len(a)//2-1]<ar and a[3*(len(a)//4)]>ar:
+            c+=1
+            m = min(m, ar)
+print(c, m)

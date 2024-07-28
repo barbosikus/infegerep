@@ -37,7 +37,7 @@ def f(a,c,m):
     if c == m:
         return 0
     h = [f(a+3,c+1,m),f(a*5,c+1,m)]
-    return any(h) if (c%2)+1==m%2 else any(h)
+    return any(h) if (c%2)+1==m%2 else all(h)
 for s in range(1,301):
     for m in range(1,5):
         if f(s,0,m):

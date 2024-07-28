@@ -9,11 +9,11 @@
 подразумевается три идущих подряд элемента последовательности.
 """
 f = [int(q) for q in open('17.txt')]
-m = max([int(q) for q in open('17.txt') if int(q)%10==3])
+m = max([int(q) for q in open('17.txt') if abs(int(q))%10==3 and len(q)==5])
 c = 0
 g = []
 for x,y,z in zip(f,f[1:],f[2:]):
-    if x%10==3 or y%10==3 or z%10==3 and (x+y+z)<=max:
+    if abs(x)%10==3 or abs(y)%10==3 or abs(z)%10==3 and (x+y+z)<=m:
         c+=1
         g.append(x+y+z)
-print(max(g))
+print(len(g),max(g))

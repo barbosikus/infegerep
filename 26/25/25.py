@@ -29,3 +29,18 @@
 При таких исходных данных нельзя набрать веса 6, 13, 20.
 Поэтому ответ для приведённого примера: 3 20
 """
+f = open('25.txt')
+a = [int(q) for q in f][1:]
+b = [0]*(sum(a)+1)
+s = 0
+for x in a:
+    b2 = b.copy()
+    for i in range(s+1):
+        if b[i] == 1:
+            b2[i+x] = 1
+    b2[x] = 1
+    b = b2
+    s+=x
+c = b[::-1].index(0)
+b = ''.join(''.join(map(str,b)).split('1'))
+print(len(b), c)

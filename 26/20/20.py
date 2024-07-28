@@ -26,3 +26,15 @@
 В данном случае есть две подходящие пары: 3 и 8 (сумма 11), 3 и 14 (сумма 17).
 В ответе надо записать числа 2 и 17.
 """
+from itertools import *
+f = open('20.txt')
+a = [int(q) for q in f][1:]
+b = set(a)
+c = 0
+m = float('-inf')
+for x,y in combinations(a, r = 2):
+    if x%2!=y%2:
+        if (x+y) in b:
+            c+=1
+            m = max(m, x+y)
+print(c, m)

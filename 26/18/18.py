@@ -30,6 +30,22 @@ S – грузоподъёмность грузового судна в тонн
 Первым рейсом будет отправлено 2 груза – 240 и 220,
 вторым – 200, 160 и 140, третьим – 150.
 """
+f = open('18.txt')
+n,s = map(int,f.readline().split())
+a = [int(q) for q in f]
+a = sorted(a)
+b = []
+c = 0
+while len(a)>0:
+    b = []
+    b.append(a.pop(-1))
+    while len(a)>0 and a[0]+sum(b)<=s:
+        for r in range(len(a)-1, -1,-1):
+            if a[r]+sum(b)<=s:
+                b.append(a.pop(r))
+                break
+    c+=1
+print(c, sum(b))
 f = open('17.txt')
 k = int(f.readline())
 s, q = sorted([int(i) for i in f]), []

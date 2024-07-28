@@ -34,6 +34,16 @@ N строках находятся значения объёмов файлов
 примера: 2 3
 """
 f = open('17.txt')
+n = f.readline()
+a = [int(q) for q in f]
+a = sorted(a)
+d1,d2 = [], []
+while len(a)>0:
+    d1.append(a.pop(-1))
+    while sum(d2)<sum(d1):
+        d2.append(a.pop(0))
+print(len(d1), len(d2))
+f = open('17.txt')
 k = int(f.readline())
 s, q1, q2 = sorted([int(i) for i in f]), [], []
 

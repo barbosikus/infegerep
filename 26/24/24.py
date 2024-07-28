@@ -38,3 +38,13 @@
 В 1964 году ему не хватает 6 видов марок.
 Поэтому ответ для приведённого примера 14 1963.
 """
+f = open('24.txt')
+a = [list(map(int,q.split())) for q in f][1:]
+b = [[0]*8]*31
+for x in a:
+    b[x[0]-1961][x[1]-1] = 1
+c = []
+for i in range(0,31):
+    c.append(sum(b[i]))
+c = c[::-1]
+print(248 - sum(c), 30-c.index(min(c))+1961)
