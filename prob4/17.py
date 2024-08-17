@@ -14,3 +14,14 @@
 Например, в последовательности 1 2 3 4 5 6 у пары (3, 4) соседние
 пары (1, 2) и (5, 6).
 """
+f = open('17.txt')
+g = list(map(int,f.readlines()))
+s1 = g[0]
+s2 = g[1]
+h = []
+for a,b,c,d in zip(g[2:], g[3:], g[4:], g[5:]):
+    if (a+b)>(s1+s2) and (a+b)>(c+d) and (a+b)>0 and (c+d)>0 and (s1+s2)>0:
+        h.append(a*b)
+    s1 = s2
+    s2 = a
+print(min(h), len(h))

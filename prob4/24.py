@@ -17,4 +17,26 @@
 f = open('24.txt')
 a = f.readline()
 b = []
-for i in range(ord('A'), ord('Z')+1):
+s = ''
+ac = 'A'
+for i in a:
+    if ord(i)>=ord(ac):
+        s+=i
+    else:
+        b.append(s)
+        s = ac
+    ac = i
+c = 0
+for i in range(len(b)):
+    b[i] = b[i].replace('A', '*')
+    b[i] = b[i].replace('E', '*')
+    b[i] = b[i].replace('I', '*')
+    b[i] = b[i].replace('O', '*')
+    b[i] = b[i].replace('U', '*')
+    b[i] = b[i].replace('Y', '*')
+    b[i] = b[i].split('*')
+    for j,g in zip(b[i], b[i][1:]):
+        c = max(c, len(j)+len(g)+1)
+    c = max(c, len(b[i][0]))
+
+print(c)

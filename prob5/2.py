@@ -19,3 +19,7 @@
 и т. д.). Буквы в ответе пишите подряд, никаких разделителей 
 между буквами ставить не нужно.
 """
+from itertools import product
+for a,b,c,d in product((0,1), repeat = 4):
+    if not(((a and b)<= c)and((b and c)<=d)):
+        print(d,b,a,c)

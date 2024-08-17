@@ -11,3 +11,11 @@
 
 Сколько существует таких слов, которые может написать Маша?
 """
+from itertools import *
+c = 0
+for s in product('giperbola', repeat = 6):
+    z = ''.join(s)
+    z = z.replace('g','*').replace('p','*').replace('r','*').replace('b','*').replace('l','*').replace('i','#').replace('e','#').replace('o','#').replace('a','#')
+    if z[0]!='#' and z[5]!='#' and '*#*' not in z:
+        c+=1
+print(c)
