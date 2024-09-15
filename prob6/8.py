@@ -7,3 +7,10 @@
 
 Сколько существует слов, которые может написать Маша?
 """
+from itertools import *
+c = 0
+for z in permutations('kabinet'):
+    s = ''.join(z)
+    if s[6]!='a' and s[6]!='i' and s[6]!='e':
+        c+=1
+print(c)

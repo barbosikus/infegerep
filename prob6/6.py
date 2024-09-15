@@ -30,3 +30,26 @@
 заданными алгоритмом линиями, не включая точки на линиях, 
 ограничивающих объединение.
 """
+from turtle import *
+home()
+tracer(0)
+seth(90)
+r = 25
+pd()
+for i in range(6):
+    fd (7*r)
+    right(120)
+pu()
+fd (3*r)
+right(90)
+pd()
+for i in range(8):
+    fd (5*r)
+    right(90)
+pu()
+for x in range(-20, 20):
+    for y in range(-20, 20):
+        goto(x*r, y*r)
+        dot(3, 'red')
+mainloop()
+'25'

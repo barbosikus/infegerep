@@ -61,3 +61,17 @@
 получающейся в результате выполнения программы, будет 
 больше либо равно 20.
 """
+def f(x):
+    while '4444' in x or '844' in x or '84' in x:
+        if '4444' in x:
+            x = x.replace('4444', '844',1)
+        if '844' in x:
+            x = x.replace('844', '488', 1)
+        if '84' in x:
+            x = x.replace('84', '3343', 1)
+for i in range(1, 100):
+    for n in range(4,10001):
+        k = str(f('8'+n*'4'))
+        if n>=i and len(k)>=20:
+            print(i)
+            break

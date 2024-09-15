@@ -12,3 +12,21 @@
 В данной задаче под парой подразумеваются два идущих подряд 
 элемента последовательности.
 """
+
+f = [int(q) for q in open('17.txt')]
+g = sorted(f)
+mn = 0
+for i in range(len(g)):
+    if len(str(g[i])) == 3:
+        mn = g[i+1]
+        break
+mn = mn**2
+c = 0
+h = []
+for x,y in zip(f, f[1:]):
+    if (x+y)<mn:
+        c+=1
+        h.append(x+y)
+print(c, max(h))
+
+

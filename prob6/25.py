@@ -16,3 +16,30 @@
 найденных чисел в порядке убывания, а во втором столбце — 
 соответствующие им результаты деления этих чисел на 42.
 """
+from itertools import *
+c = []
+for x,y in product(range(10), repeat = 2):
+    s = int(f'48{x}15{y}0')
+    if s%42 == 0:
+        c.append(s)
+for x,y in product(range(10), repeat = 2):
+    s = int(f'4815{x}{y}0')
+    if s%42 == 0:
+        c.append(s)
+for x,y in product(range(10), repeat = 2):
+    s = int(f'48{x}{y}150')
+    if s%42 == 0:
+        c.append(s)
+for x in range(10):
+    s = int(f'48{x}150')
+    if s%42 == 0:
+        c.append(s)
+for x in range(10):
+    s = int(f'4815{x}0')
+    if s%42 == 0:
+        c.append(s)
+if 48150%42 == 0:
+    c.append(48150)
+c = sorted(c)[::-1]
+for i in c:
+    print(i,i//42)

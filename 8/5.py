@@ -7,8 +7,9 @@
 Сколько существует таких слов, которые может написать Вася?
 """
 from itertools import *
-c=0
-for z in product("salo", repeat=6):
-    if 1 <= z.count('o') <= 3:
+c = 0
+for z in product('012345678', repeat = 6):
+    s = ''.join(z)
+    if s[0]!='0' and s[0]!='1' and s[0]!='3' and s[0]!='5' and s[0]!='7' and s[5]!='2' and s[5]!='3' and s.count('1')>=2:
         c+=1
 print(c)

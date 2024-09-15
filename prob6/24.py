@@ -13,3 +13,6 @@
 
 Для выполнения этого задания нужно написать программу.
 """
+f = open('24.txt')
+a = f.readline().replace('ABA', '*').replace('BAB', '*').replace('A', '#').replace('B', '#').replace('C', '#').split('#')
+print(len(max(a, key = len)))

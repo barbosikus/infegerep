@@ -13,3 +13,15 @@
 
 Для выполнения этого задания следует написать программу.
 """
+f = open('24.txt')
+a = f.readline().replace('3','e').replace('4','a')
+g = ['yandex'[:i] for i in range(1,7)][::-1]
+for i in g:
+    a = a.replace(i, '-'*len(i))
+print(a)
+for i in range(ord('a'), ord('z')+1):
+    a = a.replace(chr(i), ' ')
+a = a.replace('1', ' ').replace('2', ' ').replace('5', ' ').replace('6', ' ').replace('7', ' ').replace('9', ' ').replace('8', ' ').replace('0', ' ')
+a = a.split(' ')
+print(a)
+print(len(max(a, key = lambda b:len(b))))

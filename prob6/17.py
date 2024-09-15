@@ -13,3 +13,21 @@
 В данной задаче под парой подразумевается два идущих подряд 
 элемента последовательности.
 """
+f = [int(q) for q in open('17.txt')]
+c = 0
+g = sorted(f)
+h = []
+j = []
+for i in g:
+    if len(str(i)) == 3:
+        h.append(i)
+mx = max(h)
+print(mx)
+for x,y in zip(f, f[1:]):
+    s1 = sum(map(int, str(abs(x))))
+    s2 = sum(map(int, str(abs(y))))
+    if s1%5==0 and s2%5!=0 or s2%5==0 and s1%5!=0:
+        if abs(x**2 - y**2)>=mx**3:
+            c+=1
+            j.append(x+y)
+print(c, max(j))
