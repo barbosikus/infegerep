@@ -32,7 +32,8 @@
 from turtle import *
 tracer(0)
 seth(90)
-r = 15
+
+r = 1
 for i in range(2):
     fd(23*r)
     left(90)
@@ -53,6 +54,6 @@ pu()
 for x in range(-20,40):
     for y in range(-20, 40):
         goto(x*r,y*r)
-        dot(3,'red')
+        # dot(3,'red')
 mainloop()
 print(22*17)

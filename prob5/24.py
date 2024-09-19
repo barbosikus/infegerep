@@ -13,6 +13,7 @@
 
 Для выполнения этого задания следует написать программу.
 """
+
 f = open('24.txt')
 a = f.readline().replace('3','e').replace('4','a')
 g = ['yandex'[:i] for i in range(1,7)][::-1]

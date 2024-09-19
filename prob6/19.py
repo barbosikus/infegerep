@@ -30,17 +30,14 @@
 значение S, когда такая ситуация возможна.
 """
 def f(a,b,c,m):
+    if a+b>=189:
+        return c%2==m%2
     if c==m:
-        return  0
-    if (a+b)>=189:
-        return c%2 == m%2
-    if a>b:
-        h = [f(a+b, b,c+1,m), f(a, b+a,c+1,m),f(a,b+(a-b),c+1,m)]
-    if a<=b:
-        h = [f(a + b, b, c + 1, m), f(a, b + a, c + 1, m), f(a+(b-a), b, c + 1, m)]
-    return any(h) if (c+1)%2 == m%2 else all(h)
+        return 0
+    h = [f(a+b, b,c+1,m),f(a, b+a,c+1,m),f(a+(b-a),b,c+1,m) if b>a else f(a,b+(a-b),c+1,m)]
+    return any(h) if (c+1)%2==m%2 else all(h)
 for s in range(1,184):
-    for m in range(5):
-        if f(5, s, 0, m):
+    for m in range(1,5):
+        if f(5,s,0,m):
             print(s,m)
             break
