@@ -31,3 +31,12 @@
 
 Пример выходных данных для приведённого выше примера входных данных: 107
 """
+f = [int(q) for q in open('B40.txt')]
+q = [[float('+inf') for i in range(107)] for i in range(5)]
+mn = float('+inf')
+for i in range(len(f)):
+    x = q[i%5][106 - f[i]%107] + f[i]
+    if x<mn:
+        mn = x
+    q[i%5][f[i]%107] = min(q[i%5][f[i]%107], f[i])
+print(mn)

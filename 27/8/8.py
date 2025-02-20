@@ -34,3 +34,15 @@ N (2 ≤ N ≤ 10 000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+f = [int(q) for q in open('B8.txt')]
+m = [0 for i in range(80)]
+n = [0 for i in range(80)]
+for i in f:
+    if i>50000:
+        n[i%80]+=1
+    else:
+        m[i % 80] += 1
+s = n[0]*(m[0]+n[0]-1)
+for i in range(1,80):
+    s+=m[i]*n[80-i]+n[i]*n[80-i]
+print(s-1)

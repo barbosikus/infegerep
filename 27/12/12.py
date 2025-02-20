@@ -42,3 +42,24 @@ N (2 ≤ N ≤ 10000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+f = [int(q) for q in open('B12.txt')]
+n23 = max(f, key = lambda b: b if b%23==0 and b%2==0 else 0)
+a23 = max(f, key = lambda b: b if b%23==0 and b%2==0 and b!=n23 else 0)
+m23 = max(f, key = lambda b: b if b%23==0 and b%2!=0 else 0)
+b23 = max(f, key = lambda b: b if b%23==0 and b%2!=0 and b!=m23 else 0)
+n = max(f, key = lambda b: b if b%23!=0 and b%2==0 else 0)
+m = max(f, key = lambda b: b if b%23!=0 and b%2!=0 else 0)
+#for i in f:
+#    if i%23==0 and i%2==0 and i>n23:
+#        a23 = n23
+#        n23 = i
+#    if i%23==0 and i%2!=0 and i>m23:
+#        b23 = m23
+#        m23 = i
+#    if i%23!=0 and i%2==0 and i>n:
+#        n = i
+#    if i%23!=0 and i%2!=0 and i>m:
+#        m = i
+s1 = [a23+n23, n+n23, m+m23, b23+m23]
+print(max(s1))
+#

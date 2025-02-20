@@ -31,3 +31,16 @@ N (2 ≤ N ≤ 10 000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+f =[int(q) for q in open('B15.txt')]
+nmx = [0 for i in range(80)]
+nmn = [float('+inf') for i in range(80)]
+for i in f:
+    if i>nmx[i%80]:
+        nmx[i % 80]=i
+    if i<nmn[i%80]:
+        nmn[i % 80]=i
+mx = 0
+for i in range(len(nmx)):
+    if nmx[i]-nmn[i]>mx:
+        mx = nmx[i]-nmn[i]
+print(mx)

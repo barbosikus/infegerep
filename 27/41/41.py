@@ -31,3 +31,33 @@ N (2 ≤ N ≤ 10⁸). Каждая из следующих N строк сод�
 сначала искомое значение для файла А,
 затем для файла B.
 """
+f = [int(q) for q in open('B41.txt')]
+sl = []
+sr = []
+s = sum(f)
+q = [i for i in f]
+for i in range(len(f)):
+    res = []
+    l = q.pop(0)
+    r = q.pop(-1)
+    s-=l+r
+    so = s%1000
+    sl.append(l)
+    sr.append(r)
+    sml = 0
+    for j in range(len(sl)-1,-1,-1):
+        sml+=sl[j]
+        if (sml+s)%1000==0:
+            res.append(sml+s)
+        smr = 0
+        for k in range(len(sr)-1,-1,-1):
+            smr+=sr[k]
+            if (smr+sml+s)%1000==0:
+                res.append(smr+sml+s)
+    smr = 0
+    for k in range(len(sr) - 1, -1, -1):
+        smr += sr[k]
+        if (smr + s) % 1000 == 0:
+            res.append(smr + s)
+    if len(res) > 0:
+        print(max(res))

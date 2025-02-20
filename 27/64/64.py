@@ -35,3 +35,21 @@ N (1 ≤ N ≤ 100000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+a = open('B64.txt')
+n = int(a.readline())
+f = [list(map(int, a.readline().split())) for i in range(n)]
+s = 0
+c = [float('+inf') for i in range(4)]
+def sred(x):
+    for i in range(len(x)):
+        if x[i]!=min(x) and x[i]!=max(x):
+            return x[i]
+
+for i in range(n):
+    s+=max(f[i])+sred(f[i])
+    t = sred(f[i]) - min(f[i])
+    c[t%4] = min(c[t%4],t)
+if s%4==0:
+    print(s)
+else:
+    print(s-c[s%4])

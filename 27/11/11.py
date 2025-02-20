@@ -41,3 +41,5 @@ N (2 ≤ N ≤ 10000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+
+print(min([int(q) for q in open('B11.txt')]) * min([int(q) for q in open('B11.txt')], key = lambda b: b if b%31==0 else 100000))

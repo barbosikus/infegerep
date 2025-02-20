@@ -33,3 +33,30 @@
 
 Пример выходных данных для приведенного выше примера входных данных:2
 """
+f = [int(q) for q in open('B31.txt')]
+n1 = 0
+n3 = 0
+n7 = 0
+n9 = 0
+c = 0
+arr = [f[i] for i in range(5)]
+for i in range(5,len(f)):
+    if str(f[i])[-1] == '1':
+        c += n3
+    if str(f[i])[-1] == '3':
+        c += n1
+    if str(f[i])[-1] == '7':
+        c+=n9
+    if str(f[i])[-1] == '9':
+        c += n7
+    if str(arr[0])[-1] == '1':
+        n1+=1
+    if str(arr[0])[-1] == '3':
+        n3+=1
+    if str(arr[0])[-1] == '7':
+        n7+=1
+    if str(arr[0])[-1] == '9':
+        n9+=1
+    arr.append(f[i])
+    del arr[0]
+print(c)

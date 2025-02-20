@@ -43,3 +43,28 @@ N, K и V (1 < N ≤ 10 000 000, 1 < K ≤ 10 000 000, 1 < V ≤ 1000) –
 сначала искомое значение для файла А,
 затем для файла B.
 """
+import math
+a = open('B60.txt')
+n,k,v = map(int,a.readline().split())
+f = [list(map(int,a.readline().split())) for i in range(n)]
+arr = [0 for i in range(5089573)]
+for i in range(n):
+    arr[f[i][0]]+=math.ceil(f[i][1]/v)
+f = arr
+cr = [0]
+cl = [0]
+for i in range(len(f)//2):
+    cr[0]+=i*f[i]
+for i in range(len(f)//2, len(f)):
+    cl[0]+=(len(f)-i)*f[i]
+cfr = sum(f[:len(f)//2])
+cfl = sum(f[len(f)//2:])
+c = [[cr[0]+cl[0], 0]]
+for i in range(1,n):
+    cr.append(cr[i-1]-cfr)
+    cl.append(cl[i-1]+cfl)
+    cfr-=f[i]
+    cfl+=f[i]
+    c.append([cr[i]+cl[i], i])
+
+print(min(c, key = lambda a: a[0]), list(map(lambda a:a[0],c)).count(457363173365))

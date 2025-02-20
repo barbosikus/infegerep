@@ -32,3 +32,31 @@
 сумма элементов которых нечётна, произведение кратно 13,
 и номера элементов в паре отличаются не менее, чем на 5.
 """
+f = [int(q) for q in open('B30.txt')]
+arr = [f[i] for i in range(0,4)]
+n13ch = 0
+n13n = 0
+nch = 0
+nn = 0
+c = 0
+for i in range(4,len(f)):
+    if f[i]%13==0 and f[i]%2==0:
+        c+=nn
+    if f[i]%13==0 and f[i]%2!=0:
+        c+=nch
+    if f[i] % 13 != 0 and f[i] % 2 == 0:
+        c += n13n
+    if f[i] % 13 != 0 and f[i] % 2 != 0:
+        c += n13ch
+    if arr[0]%2!=0:
+        nn+=1
+    if arr[0]%2==0:
+        nch+=1
+    if arr[0] % 13 == 0 and arr[0] % 2 == 0:
+        n13ch+=1
+    if arr[0] % 13 == 0 and arr[0] % 2 != 0:
+        n13n+=1
+    arr.append(f[i])
+    del arr[0]
+print(c)
+        #c = n13ch*nn + n13n*nch

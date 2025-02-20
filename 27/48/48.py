@@ -21,3 +21,61 @@ N – общее количество чисел в наборе.
 сначала значение искомой суммы для файла A,
 затем для файла B.
 """
+def x(arr):
+    k = 0
+    for i in arr:
+        if i%2==0:
+            k+=1
+    return k
+f = [int(q) for q in open('27-B.txt')]
+r = 0
+l = 0
+mr = 0
+ml = 0
+
+#def udr(arr):
+#    n = len(arr)
+#    r = 0
+#    for i in range(n-1,0,-1):
+#        t = arr.pop(-1)
+#        r+=t
+#        if t%2==0:
+#            break
+#    return r
+#def udl(arr):
+#    n = len(arr)
+#    r = 0
+#    for i in range(n-1,0,-1):
+#        t = arr.pop(0)
+#        r+=t
+#        if t%2==0:
+#            break
+#    return r
+#s = sum(f)
+#while True:
+#    r = udr(f)
+#    l = udl(f)
+#    if r>l:
+#        s -= l
+#        ml +=l
+#    else:
+#        s -= r
+#        mr += r
+#    if x(f)%30==0:
+#        break
+#print(sum(f), x(f))
+ms = [float('+inf') for i in range(30)]
+cs = 0
+c = 0
+mx = 0
+for i in range(len(f)):
+    cs += f[i]
+    if f[i]%2==0 and f[i]>0:
+       c+=1
+    mx = max(mx, cs - ms[c%30])
+    if cs<ms[c%30]:
+        ms[c%30] = cs
+print(mx)
+
+
+

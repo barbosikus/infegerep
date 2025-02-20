@@ -33,3 +33,25 @@ N (2 ≤ N ≤ 10⁸).
 сначала искомое значение для файла А,
 затем для файла B.
 """
+g = open('B69.txt')
+f = [int(q) for q in g]
+ms = [float('+inf') for i in range(69)]
+ml = [0 for i in range(69)]
+s = 0
+l = 0
+sc = 0
+for i in range(len(f)):
+    sc+=f[i]
+    if sc%69==0:
+        if sc > s or (sc == s and i < l):
+            s = sc
+            l = i
+    a = sc - ms[sc%69]
+    lc = i - ml[sc%69]
+    if a>s or (s == a and lc<l):
+        s = a
+        l = lc
+    if sc < ms[sc%69]:
+        ms[sc % 69] = sc
+        ml[sc % 69] = lc
+print(s,l)

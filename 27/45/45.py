@@ -20,3 +20,19 @@ N (100 ≤ N ≤ 5000000).
 сначала искомое значение для файла А,
 затем для файла B.
 """
+f = [int(q) for q in open('B45.txt')]
+c = []
+s = float('+inf')
+cnt = 0
+a = []
+for i in range(len(f)):
+    c.append(f[i])
+    if cnt == 10:
+        s = min(s, sum(c))
+    if f[i]%3==0:
+        cnt+=1
+        if cnt>10:
+            c = c[a[0]+1:]
+            a.pop(0)
+        a.append(f[i])
+print(s)

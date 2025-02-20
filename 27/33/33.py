@@ -30,3 +30,19 @@
 
 Пример выходных данных для приведённого выше примера входных данных:1
 """
+f = [int(q) for q in open('B33.txt')]
+arr = [f[i] for i in range(5)]
+ost = [0 for i in range(13)]
+ost2 = [0 for i in range(13)]
+c = 0
+for i in range(5,len(f)):
+    if f[i]%2==0:
+        c+=ost[f[i]%13]
+    else:
+        c += ost2[f[i] % 13]
+    ost[arr[0]%13]+=1
+    if arr[0]%2==0:
+        ost2[arr[0] % 13] += 1
+    del arr[0]
+    arr.append(f[i])
+print(c)

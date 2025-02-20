@@ -33,3 +33,22 @@ N (1 ≤ N ≤ 10 000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+f =[int(q) for q in open('B16.txt')]
+dict = {}
+def summa(x):
+    s = str(x)
+    r = sum(map(int, s))
+    return r
+for i in f:
+    x = summa(i)
+    if dict.get(x):
+        dict[x]+=1
+    else:
+        dict[x] = 1
+mx = 0
+mxi = 0
+for i in dict:
+    if dict[i]>mx:
+        mx = dict[i]
+        mxi = i
+print(mxi)

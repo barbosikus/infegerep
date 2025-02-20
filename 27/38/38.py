@@ -28,3 +28,20 @@
 
 Пример выходных данных для приведённого примера входных данных: 2
 """
+f = [int(q) for q in open('B38.txt')]
+arr = []
+c = 0
+for i in f:
+    if i<=134:
+        for j in arr:
+            if (i+j)<=134 and i<j:
+                c+=1
+        arr.append(i)
+print(c)
+q = [0 for i in range(136)]
+c = 0
+for i in f:
+    if i<=134:
+        c+= sum(q[:133-i])
+        q[i] +=1
+print(c)

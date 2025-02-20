@@ -43,3 +43,10 @@
 16+4, 16+5, 16+11, 4+5, 4+11, 5+11.
 Из них на 8 не делятся 36 сумм.
 """
+f = [int(q) for q in open('B32.txt')]
+c = 0
+for i in range(6, len(f)):
+    for j in range(i-6,i):
+        if (f[i]+f[j])%8==0:
+            c+=1
+print(c)

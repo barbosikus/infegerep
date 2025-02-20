@@ -39,3 +39,16 @@ N (1 ≤ N ≤ 100000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+a  = open('B63.txt')
+n = int(a.readline())
+f = [list(map(int, a.readline().split())) for i in range(n)]
+s = 0
+c = float('+inf')
+for i in range(n):
+    s+=min(f[i])
+    t = max(f[i]) - min(f[i])
+    c = min(c,t if t%5!=0 else c)
+if s%5==0:
+    print(s+c)
+else:
+    print(s)

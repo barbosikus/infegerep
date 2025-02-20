@@ -37,3 +37,18 @@ N (1 ≤ N ≤ 1 000 000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+a = open('B65.txt')
+n = int(a.readline())
+f = sorted([int(q) for q in a])
+s = sum(f)
+for i in range(n):
+    if s%17==0:
+        break
+    else:
+        if f[0]<f[-1]:
+            s-=f[0]
+            f.pop(0)
+        else:
+            s-=f[-1]
+            f.pop(-1)
+print(s)

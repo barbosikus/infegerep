@@ -24,3 +24,17 @@
 
 Пример выходных данных для приведенного выше примера входных данных: 6
 """
+f =[list(map(int, q.split())) for q in open('B19.txt')]
+mx = 0
+mn = float('+inf')
+mxy = 0
+for i in f:
+    if i[1]==0:
+        if i[0]>mx:
+            mx=i[0]
+        if i[0]<mn:
+            mn = i[0]
+    else:
+        if abs(i[1])>mxy:
+            mxy = abs(i[1])
+print((mx-mn)*mxy/2)

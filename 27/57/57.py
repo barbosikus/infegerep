@@ -56,3 +56,30 @@
 для всех возможных вариантов, поскольку написанная по такому алгоритму
 программа будет выполняться слишком долго.
 """
+a = open('B57.txt')
+n, m = map(int, a.readline().split())
+f = [list(map(int, a.readline().split())) for q in range(n)]
+print(max(f, key = lambda a: a[0]))
+arr = [0 for i in range(9999998)]
+for i in f:
+    arr[i[0]-1] += i[1]//m if i[1]%m==0 else i[1]//m+1
+print(max(arr))
+f = arr
+print(f)
+sf = sum(f)
+sr = 0
+sl = 0
+sfr = sf - f[0]
+sfl = f[0]
+
+for i in range(9999998):
+    sr += i*f[i]
+s = [sr+sl]
+print(sf, sr, sl, sfr, sfl)
+for i in range(1,9999998):
+    sr -= sfr
+    sl += sfl
+    s.append(sr+sl)
+    sfr-=f[i]
+    sfl+=f[i]
+print(min(s))

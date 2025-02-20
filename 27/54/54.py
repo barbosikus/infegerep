@@ -45,3 +45,16 @@
 сначала искомое значение для файла А,
 затем для файла B.
 """
+a = open("B54.txt")
+n, v, m = map(int, a.readline().split())
+f = [list(map(int, a.readline().split())) for q in range(n)]
+print(max(f, key = lambda a: a[0]))
+arr = [0 for i in range(100_000)]
+print(n, len(f))
+for i in range(n):
+    arr[f[i][0]] += (f[i][1])//v if f[i][1]%v==0 else (f[i][1])//v + 1
+
+s = [sum(arr[:2*m+1])]
+for i in range(m, n - m - 1):
+    s.append(arr[-1]-arr[i-m]+arr[i+m+1])
+print(max(s))

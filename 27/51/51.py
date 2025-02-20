@@ -43,3 +43,10 @@ N и M (2 ≤ N ≤ 10 000 000, 1 ≤ M ≤ 10 000 000) -
 При таких исходных данных количество комплектов питания
 из оптимального расположения цеха составит: 21
 """
+a = open("B51.txt")
+n, m = map(int, a.readline().split())
+f = [int(q) for q in a]
+s = [sum(f[:2*m+1])]
+for i in range(m, n - m - 1):
+    s.append(s[-1]-f[i-m]+f[i+m+1])
+print(max(s))

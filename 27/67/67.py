@@ -33,3 +33,20 @@ N (2 ≤ N ≤ 10⁸).
 сначала искомое значение для файла А,
 затем для файла B.
 """
+a = open('B67.txt')
+n = int(a.readline())
+f = [int(q) for q in a]
+ms = [float('+inf') for i in range(1000)]
+cs = 0
+s = 0
+for i in range(n):
+    cs+=f[i]
+    if cs%1000==0:
+        s = cs
+    a = cs - ms[cs%1000]
+    if a>=s :
+        s = a
+    if cs<ms[cs%1000]:
+        ms[cs % 1000] = cs
+print(s)
+

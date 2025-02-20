@@ -37,3 +37,10 @@
 
 Выходные данных для приведенного выше примера: 2142
 """
+f = [int(q) for q in open('B37.txt')]
+mn = float('+inf')
+for i in range(len(f)):
+    for j in range(max(0,i-11), i):
+        if (f[i] + f[j])%2142==0 and (f[i] + f[j])<mn:
+            mn = f[i] + f[j]
+print(mn)

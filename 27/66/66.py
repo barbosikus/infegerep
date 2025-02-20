@@ -27,3 +27,15 @@ N (1 ≤ N ≤ 100000).
 сначала искомое значение для файла А,
 затем для файла B.
 """
+a = open('B66.txt')
+n = int(a.readline())
+f = [int(q) for q in a]
+arr = [0 for i in range(10)]
+#s = 0
+#c = 0
+for i in range(n):
+    a = arr.copy()
+    arr[f[i]%10]+=1
+    for j in range(10):
+        arr[(f[i]+j)%10]+=a[j]
+print(arr[5])

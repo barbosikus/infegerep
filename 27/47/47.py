@@ -24,3 +24,25 @@ N (100 ≤ N ≤ 5000000).
 сначала искомое значение для файла А,
 затем для файла B.
 """
+f = [int(q) for q in open('B47.txt')]
+ms = [float('-inf') for i in range(2077)]
+ml = [0 for i in range(2077)]
+cs = 0
+s = float('+inf')
+l = 0
+for i in range(len(f)):
+    cs += f[i]
+    if cs%2077==0:
+        if cs<s or (cs == s and i>l):
+            s = cs
+            l = i
+    a = cs - ms[cs%2077]
+    cl = i - ml[cs%2077]
+    if a<s or (cs == s and cl>l):
+        s = a
+        l = cl
+    if cs > ms[cs%2077]:
+        ms[cs % 2077] = cs
+        ml[cs % 2077] = i
+print(s, l)
+

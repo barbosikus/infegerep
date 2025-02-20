@@ -21,3 +21,23 @@ N – общее количество чисел в наборе.
 сначала значение искомой суммы для файла A,
 затем для файла B.
 """
+f = [int(q) for q in open('B50.txt')]
+arr = [0 for i in range(7)]
+q = []
+c = 0
+s = 0
+sm = 0
+for i in range(6):
+    sm+=f[i]
+    c+=1 if f[i]%7==0 else 0
+    q.append(c)
+for i in range(6, len(f)):
+    sm += f[i]
+    c += 1 if f[i] % 7 == 0 else 0
+    if c%7==0:
+        s=max(s, sm)
+    s = max(s, sm - arr[c%7])
+    a = q.pop(0)
+    arr[a%7] = min(arr[a%7], sm)
+    q.append(c)
+print(s)

@@ -61,3 +61,14 @@ N многоэтажных жилых домов
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+a = open('B55.txt')
+n,k, m = map(int, a.readline().split())
+f = [list(map(int, a.readline().split())) for q in range(n)]
+arr = [0 for i in range(k)]
+for i in f:
+    arr[i[0]-1] += i[1]//9 if i[1]%9==0 else i[1]//9+1
+
+s = [sum(arr[:m+1]+ arr[n-m:])]
+for i in range(1, n+m+1):
+    s.append(s[-1] - arr[(n-m+i-1)%n]+arr[(i+m)%n])
+print(max(s))

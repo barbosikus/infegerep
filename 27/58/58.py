@@ -58,3 +58,30 @@
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+import math
+a = open('B58.txt')
+n = int(a.readline())
+f = [list(map(int, a.readline().split())) for i in range(n)]
+
+arr = [0 for i in range(9999995)]
+for i in range(n):
+    try:
+        arr[f[i][0]]+= math.ceil(f[i][1]/36)
+    except:
+        print(f[i])
+s = sum(arr)
+sr = 0
+sl = 0
+sfr = s - arr[0]
+sfl = 0
+for i in range(len(arr)):
+    sr += i*arr[i]
+c = [[sr+sl,0]]
+print(sr, sl,sfr,sfl)
+for i in range(1,len(arr)):
+    sr-=sfr
+    sl+=sfl
+    sfl+=arr[i]
+    sfr-=arr[i]
+    c.append([sr+sl,i])
+print(min(c, key = lambda a: a[0]), s)

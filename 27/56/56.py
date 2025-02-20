@@ -50,3 +50,21 @@
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+a = open('B56.txt')
+n = int(a.readline())
+f = [int(q) for q in a]
+sf = sum(f)
+sr = 0
+sl = 0
+sfr = sf - f[0]
+sfl = f[0]
+for i in range(n):
+    sr += i*f[i]
+s = [sr+sl]
+for i in range(1,n):
+    sr -= sfr
+    sl += sfl
+    s.append(sr+sl)
+    sfr-=f[i]
+    sfl+=f[i]
+print(max(s))

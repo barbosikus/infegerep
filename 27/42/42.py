@@ -20,3 +20,13 @@ N – общее количество чисел в наборе.
 сначала искомое количество для файла A,
 затем – для файла B.
 """
+f = [int(q) for q in open('B42.txt')]
+c = [0 for i in range(666)]
+pref = [0 for i in range(len(f))]
+for i in range(1,len(f)):
+    pref[i] = pref[i-1]+f[i]
+otv = 0
+for i in range(1, len(f)):
+    c[pref[i-1]%666]+=1
+    otv+=c[665-pref[i]%666]
+print(otv)

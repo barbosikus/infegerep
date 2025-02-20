@@ -33,3 +33,56 @@ N (2 ≤ N ≤ 100000).
 сначала искомое значение для файла А,
 затем для файла B.
 """
+f = [int(q) for q in open('B44.txt')]
+sl = []
+sr = []
+cl = 0
+cr = 0
+s = 0
+sm = 0
+for i in f:
+    sm+=i
+    if i%5==0:
+        s+=1
+q = [i for i in f]
+for i in range(len(f)):
+    res = []
+    l = q.pop(0)
+    r = q.pop(-1)
+    sm-=l+r
+    if l%5==0:
+        s-=1
+        cl+=1
+    if r%5==0:
+        s-=1
+        cr+=1
+    sl.append(l)
+    sr.append(r)
+    sml = 0
+    tcl = 0
+
+    for j in range(len(sl)-1,-1,-1):
+        sml+=sl[j]
+        if sl[j]%5==0:
+            tcl+=1
+        if (tcl+s)%3==0:
+            res.append(sm+sml)
+        smr = 0
+        tcr = 0
+        for k in range(len(sr)-1,-1,-1):
+            smr+=sr[k]
+            if sr[k] % 5 == 0:
+                tcr += 1
+            if (tcr + tcl + s) % 3 == 0:
+                res.append(sm + smr + sml)
+    smr = 0
+    tcr = 0
+    for k in range(len(sr) - 1, -1, -1):
+        smr += sr[k]
+        if sr[k] % 5 == 0:
+            tcr += 1
+        if (tcr + s) % 3 == 0:
+            res.append(sm + smr)
+    if len(res) > 0:
+        print(max(res))
+        break

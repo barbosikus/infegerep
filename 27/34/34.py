@@ -31,3 +31,13 @@
 
 Выходные данных для примера: 144
 """
+f = [int(q) for q in open('B34.txt')]
+arr = [float('+inf') for i in range(144)]
+m = float('+inf')
+for i in f:
+    o = 0 if i%144==0 else 144-(i%144)
+    if arr[o]<i and i+arr[o]<m:
+        m = i+arr[o]
+    if arr[i%144]>i:
+        arr[i%144] = i
+print(m)

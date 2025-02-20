@@ -35,3 +35,20 @@
 
 Пример выходных данных для приведённого выше примера входных данных: 6
 """
+f = open('B29.txt')
+a = [int(f.readline()) for i in range(8)]
+n23 = 0
+n = 0
+c = 0
+for i in range(10000-8):
+    x = int(f.readline())
+    if x%23==0:
+        c += n
+    else:
+        c += n23
+    n += 1
+    if a[0]%23==0:
+        n23+=1
+    a.append(x)
+    del a[0]
+print(c)

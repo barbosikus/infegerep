@@ -30,3 +30,19 @@
 
 Пример выходных данных для приведённого выше примера входных данных: 412
 """
+f = [int(q) for q in open('B36.txt')]
+arr13 = [0 for i in range(100)]
+arr10 = [0 for i in range(12)]
+mx = 0
+for i in range(len(f)):
+    if int(str(f[i])[-2:])>12:
+        if f[i]>arr13[99-int(str(f[i])[-2:])-1] and f[i]+arr13[99-int(str(f[i])[-2:])-1]>mx:
+            mx = f[i]+arr13[99-int(str(f[i])[-2:])-1]
+        if arr13[int(str(f[i])[-2:])] < f[i]:
+            arr13[int(str(f[i])[-2:])] = f[i]
+    else:
+        if f[i]>arr10[12-int(str(f[i])[-2:])-1] and f[i]+arr10[12-int(str(f[i])[-2:])-1]>mx:
+            mx = f[i]+arr10[12-int(str(f[i])[-2:])-1]
+        if arr10[int(str(f[i])[-2:])-1] < f[i]:
+            arr10[int(str(f[i])[-2:])-1] = f[i]
+print(mx)

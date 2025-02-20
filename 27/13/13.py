@@ -40,3 +40,14 @@ N (2 ≤ N ≤ 10000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+f = [int(q) for q in open('B13.txt')]
+n = [float('+inf') for i in range(11)]
+for i in f:
+    n[i%11] = min(n[i%11], i)
+g = []
+for i in range (1,11):
+    g.append(n[0]+n[i]+n[11-i])
+    for j in range(1,11):
+        if i!=j and 11-i-j!=i and 11-i-j!=j and 11-i-j>0:
+            g.append(n[i]+n[j]+n[11-i-j])
+print(min(g))

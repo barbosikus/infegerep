@@ -40,3 +40,17 @@ N (1 ⩽ N ⩽ 10 000 000) - общее количество показаний
 поскольку написанную по такому алгоритму программа
 будет выполняться слишком долго.
 """
+a = open('B53.txt')
+n,k = map(int, a.readline().split())
+f = [int(q) for q in a]
+cm = 0
+c = 0
+sc = 0
+for i in range(n):
+    sc+=f[i]
+    c+=1
+    while sc>k:
+        c-=1
+        sc-=f[i-c]
+    cm = max(cm, c)
+print(cm)

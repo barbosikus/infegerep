@@ -40,3 +40,6 @@ N (2 ≤ N ≤ 10000).
 поскольку написанная по такому алгоритму программа
 будет выполняться слишком долго.
 """
+
+
+print(max([int(q) for q in open('B10.txt')], key = lambda b: b if b%2==0 else 0) + max([int(q) for q in open('B10.txt')], key = lambda b: b if b%2!=0 else 0))

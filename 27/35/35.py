@@ -30,3 +30,15 @@
 
 Пример выходных данных для приведенного выше примера входных данных:274
 """
+f = [int(q) for q in open('B35.txt')]
+mx = [0 for i in range(137)]
+mn = [float('+inf') for i in range(137)]
+arr = [f[i] for i in range(4)]
+c = 0
+for i in range(4, len(f)):
+    c = max(c, f[i] - mn[f[i]%137], mx[f[i]%137] - f[i])
+    mx[arr[0]%137] = max(mx[arr[0]%137], arr[0])
+    mn[arr[0] % 137] = min(mn[arr[0] % 137], arr[0])
+    arr.append(f[i])
+    del arr[0]
+print(c)

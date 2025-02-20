@@ -40,3 +40,15 @@ N и M (2 ≤ N ≤ 10 000 000, 1 ≤ M ≤ 10 000 000) -
 При таких исходных данных вес почты
 из оптимального расположения почтамта составит: 22
 """
+a = open('B52.txt')
+n, m = map(int, a.readline().split())
+f = [int(q) for q in a]
+#f = [*f[n-m:], *f, *f[:m+1]]
+#s = [sum(f[:2*m+1])]
+#for i in range(m, n - m-1):
+#    s.append(s[-1] - f[i-m] + f[i+m+1])
+#print(max(s))
+s = [sum(f[:m+1]+ f[n-m:])]
+for i in range(1, n+m+1):
+    s.append(s[-1] - f[(n-m+i-1)%n]+f[(i+m)%n])
+print(max(s))
